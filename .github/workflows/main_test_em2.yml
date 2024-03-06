@@ -1,0 +1,23 @@
+name: Test (main)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: ["windows-latest", "macos-latest", "ubuntu-latest"]
+    name: "Build on ${{ matrix.os }}"
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Get repository
+        run: git clone https://github.com/embroidermodder/embroidermodder
+      - name: Build
+        run: cd embroidermodder; ./test.sh ${{ matrix.os }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: embroidermodder-${{ matrix.os }}
+          path: ./embroidermodder
