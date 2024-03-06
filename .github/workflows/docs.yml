@@ -5,31 +5,18 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: "40 09 * * *"
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
   docs:
     name: "Build Reference Manual"
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: "Build"
-        run: |
-          git clone https://github.com/embroidermodder/libembroidery
-          cd libembroidery
-          bash bin/build_refman.sh
-          cd ..
+        run: bash bin/build_refman.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./libembroidery/docs/html
+          path: ./refman.pdf

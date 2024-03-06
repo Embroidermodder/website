@@ -1,12 +1,12 @@
 name: Build (experimental)
 
 on:
-  push:
-    branches:
-      - experimental
+#  push:
+#    branches:
+#      - experimental
   workflow_dispatch:
-  schedule:
-    - cron: "30 6 * * *"
+#  schedule:
+#    - cron: "30 6 * * *"
 
 jobs:
   build-libembroidery:
