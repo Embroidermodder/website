@@ -1,4 +1,4 @@
-name: Test
+name: Test libembroidery
 
 on:
   push:
@@ -11,15 +11,12 @@ jobs:
     name: "Build on ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: CMake
+      - name: Test
         run: |
+          git clone https://github.com/embroidermodder/libembroidery
+          cd libembroidery
           mkdir build
           cd build
           cmake ..
           cmake --build .
-      - name: Testing
-        run: |
-          cd build
           ./embroider --test
