@@ -22,17 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     name: "Build website."
     steps:
-      - name: Checkout
-        run: |
-          git clone https://github.com/embroidermodder/libembroidery
-          cd libembroidery
-          bash bin/build_website.sh
-          cd ..
-
+      - name: checkout
+        uses: actions/checkout@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./libembroidery/docs/html
+          path: ./html
 
   deploy:
     runs-on: ubuntu-latest
