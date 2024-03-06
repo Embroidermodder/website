@@ -20,15 +20,15 @@ jobs:
     name: "Build website."
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: git clone https://github.com/embroidermodder/libembroidery
 
       - name: Build
-        run: bash bin/build_website.sh
+        run: cd libembroidery; bash bin/build_website.sh; cd ..
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/html
+          path: ./libembroidery/docs/html
 
   deploy:
     runs-on: ubuntu-latest
