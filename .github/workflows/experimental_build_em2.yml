@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - experimental
+  workflow_dispatch:
+  schedule:
+    - cron: "30 6 * * *"
 
 jobs:
   build:
