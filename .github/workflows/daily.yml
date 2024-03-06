@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build
-        run: bash build.sh
+        run: bash bin/build.sh
       - name: Upload
         run: |
           # These commands are where we self-modify the repository and
