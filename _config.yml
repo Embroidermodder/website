@@ -3,6 +3,7 @@ description: Free and Open Source Software for Machine Embroidery
 show_downloads: true
 markdown: GFM
 theme: jekyll-theme-minimal
+verbose: true
 
 collections:
   tutorials:
