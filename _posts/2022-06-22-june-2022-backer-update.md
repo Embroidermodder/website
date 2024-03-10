@@ -1,7 +1,6 @@
 ---
 title: "June 2022 Backer Update"
 author: "The Embroidermodder Team"
-date: "2022-06-22"
 ---
 
 Hi backers,
