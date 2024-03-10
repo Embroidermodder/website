@@ -14,17 +14,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Build with Jekyll
-        run: |
-          # sudo apt-get install -y jekyll jekyll-theme-minima
-          sudo gem install bundler
-
-          git clone https://github.com/embroidermodder/website
-          cd website
-          bundle install
-          jekyll b
-          mv _site ..
-          cd ..
+        run: bash build.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
