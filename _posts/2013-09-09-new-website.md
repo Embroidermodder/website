@@ -1,7 +1,6 @@
 ---
 title: "New Website!"
 author: "Jonathan"
-date: "2013-09-09"
 ---
 
 The Embroidermodder website now has a fresh new look. The content has been updated to reflect the upcoming version, Embroidermodder 2.
