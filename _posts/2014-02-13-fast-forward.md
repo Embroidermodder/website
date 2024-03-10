@@ -1,8 +1,6 @@
 ---
 title: "Fast Forward"
 author: "Jonathan"
-abbrev: "feb14"
-date: "2014-02-13"
 ---
 
 There have been some changes that happened over the past several months:
