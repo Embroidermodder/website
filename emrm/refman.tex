@@ -769,14 +769,12 @@ too long (stopping equations that hang).
 
 To see examples of this see the \texttt{assets/shapes/*.ps} files.
 
-SVG Icons
-~~~~~~~~~
+\subsection{SVG Icons}
 
 To make the images easier to alter and restyle we could switch to svg icons.
 There's some code in the git history to help with this.
 
-The Actions System
-~~~~~~~~~~~~~~~~~~
+\subsection{The Actions System}
 
 In order to simplify the development of a GUI that is flexible and easy to
 understand to new developers we have a custom action system that all user
@@ -789,23 +787,24 @@ There will be an accompanying argument for this function call, currently being
 drafted as ``action_call``. So when the user makes a function call it should
 contain information like the mouse position, whether special key is pressed etc.
 
-Accessibility
-~~~~~~~~~~~~~
+\subsection{Accessibility}
 
 Software can be more or less friendly to people with dyslexia, partial
 sightedness, reduced mobility and those who don't speak English. Embroidermodder
 2 has, in its design, the following features to help:
 
-* icons for everything to reduce the amount of reading required
-* the system font is configurable: if you have a dyslexia-friendly font you
-can load it
-* the interface rescales to help with partial-sightedness
-* the system language is configurable, unfortunately the docs will only be
-in English but we can try to supply lots of images of the interface to make it
-easier to understand as a second language
-* buttons are remappable: XBox controllers are known for being good for
-people with reduced mobility so remapping the buttons to whatever setup you have
-should help
+\begin{itemize}
+\item icons for everything to reduce the amount of reading required
+\item the system font is configurable: if you have a dyslexia-friendly font you
+    can load it
+\item the interface rescales to help with partial-sightedness
+\item the system language is configurable, unfortunately the docs will only be
+    in English but we can try to supply lots of images of the interface to make it
+    easier to understand as a second language
+\item buttons are remappable: XBox controllers are known for being good for
+    people with reduced mobility so remapping the buttons to whatever setup you have
+    should help
+\end{itemize}
 
 Note that most of these features will be released with version 2.1, which is planned for around
 early 2023.
@@ -866,36 +865,39 @@ This should backend to a C renderer or something.
 Embroidermodder should boot from the command line regardless of whether it is or is not
 installed (this helps with testing and running on machines without root). Therefore, it can
 create an initiation file but it won't rely on its existence to boot:
-`~/.embroidermodder/config.json`.
+\texttt{~/.embroidermodder/config.json}.
 
-* Switch colors to be stored as 6 digit hexcodes with a `\#`.
-* We've got close to a hand implemented ini read/write setup in `settings.py`.
+\begin{itemize}
+\item Switch colors to be stored as 6 digit hexcodes with a `\#`.
+\item We've got close to a hand implemented ini read/write setup in `settings.py`.
+\end{itemize}
 
-Distribution
-~~~~~~~~~~~~
-
-:index:`distribution`
+\subsection{Distribution}
+\index{distribution}
 
 When we release the new pip wheel we should also package:
 
-* ``.tar.gz`` and ``.zip`` source archive.
-* Debian package
-* RPM package
+\begin{itemize}
+\item \texttt{.tar.gz} and \texttt{.zip} source archive.
+\item Debian package
+\item RPM package
+\end{itemize}
 
 Only do this once per minor version number.
 
 .. todo::
    Screenshot a working draft to demonstrate.
 
-Perennial Jobs
-~~~~~~~~~~~~~~
+\subsection{Perennial Jobs}
 
-* Check for memory leaks
-* Clear compiler warnings on `-Wall -ansi -pedantic` for C.
-* Write new tests for new code.
-* Get Embroidermodder onto the current version of libembroidery.
-* PEP7 compliance.
-* Better documentation with more photos/screencaps.
+\begin{itemize}
+\item Check for memory leaks
+\item Clear compiler warnings on `-Wall -ansi -pedantic` for C.
+\item Write new tests for new code.
+\item Get Embroidermodder onto the current version of libembroidery.
+\item PEP7 compliance.
+\item Better documentation with more photos/screencaps.
+\end{itemize}
 
 Full Test Suite
 ~~~~~~~~~~~~~~~
