@@ -1,7 +1,6 @@
 ---
 title: "January 2022 Development Notes For Embroidermodder 2"
 author: "The Embroidermodder Team"
-date: "2022-01-31"
 ---
 
 Hi backers,
