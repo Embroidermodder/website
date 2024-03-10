@@ -1,1 +1,1 @@
-gem "jekyll-theme-minima"
+#gem "jekyll-theme-minima"
