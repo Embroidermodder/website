@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Build with Jekyll
         run: |
-          sudo apt-get install -y jekyll jekyll-theme-minima
+          # sudo apt-get install -y jekyll jekyll-theme-minima
 
           git clone https://github.com/embroidermodder/website
           cd website
