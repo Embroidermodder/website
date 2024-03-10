@@ -1,7 +1,6 @@
 ---
 title: "Our Kickstarter Crowdfunding Campaign is LIVE!"
 authors: "Jonathan and Josh"
-date: "2014-03-17"
 ---
 
 <a href="https://www.kickstarter.com/projects/redteam316/embroidermodder-2-for-windows-mac-linux-pi-and-ard"><img class="img" src="images/kickstarter/embroidermodder-kickstarter-launch-1280x720.png" alt="Embroidermodder 2 Kickstarter Campaign" /></a>
