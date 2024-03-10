@@ -1,7 +1,6 @@
 ---
 title: "Crowdfunding Campaign Coming Soon!"
 author: "Jonathan"
-date: "2013-09-09"
 ---
 
 <a href="http://www.kickstarter.com/projects/redteam316/369640335?token=57f7685e"><img class="img" src="images/kickstarter/kickstarter-logo-dark.png" alt="Kickstarter Logo" /></a>
