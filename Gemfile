@@ -2,6 +2,7 @@
 
 source 'https://rubygems.org'
 
+gem "liquid"
 gem "jekyll", "~> 3.0"
 #gem "jekyll", "~> 4.2"
 
