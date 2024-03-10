@@ -2,7 +2,7 @@ title: Embroidermodder 2.0
 description: Free and Open Source Software for Machine Embroidery
 show_downloads: true
 markdown: GFM
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
 verbose: true
 
 collections:
