@@ -1,7 +1,6 @@
 ---
 title: "Open Collective and New Plan"
 author: "Robin Swift"
-date: "2021-12-19"
 ---
 
 Hi, welcome to our first update after switching to Open Collective.
