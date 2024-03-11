@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo apt-get install -y jekyll jekyll-theme-minima
-sudo gem install bundler
+sudo apt-get install -y hugo
 
-bundle install
-bundle exec jekyll b
+hugo
+
+mv public _site
