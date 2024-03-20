@@ -1,4 +1,4 @@
-name: Deploy Jekyll
+name: Deploy website
 
 on:
   push:
@@ -16,11 +16,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build with Jekyll
-        run: |
-          sudo apt-get install -y hugo
-          hugo
-          mv public _site
+      - name: Dependencies
+        run: sudo apt -y install pandoc
+      - name: Build
+        run: bash build.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
