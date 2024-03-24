@@ -6,12 +6,32 @@
 <style>
 @font-face {
     font-family: maintext;
-    src: url('https://libembroidery.org/fonts/SourceSerif4_Regular.ttf') format('truetype');
+    src: url('https://libembroidery.org/fonts/SourceSerif4-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: title;
+    src: url('https://libembroidery.org/fonts/SourceSerif4-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: sourcecode;
+    src: url('https://libembroidery.org/fonts/SourceCodePro-Regular.ttf') format('truetype');
 }
 
 body {
     font-family: maintext, Times, serif;
     font-size: 100%;
+}
+
+h1 {
+    font-family: title, Times, serif;
+    font-size: 140%;
+}
+
+pre {
+    font-family: sourcecode, monospace;
+    font-size: 90%;
 }
   
 div.container {
