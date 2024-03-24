@@ -5,7 +5,7 @@ keywords: machine embroidery, embroidery, dst, pes, jef
 ---
 
 <h1 align="center" style="display:block">
-  <a name="logo" href="https://libembroidery.org"><img align="center" src="icons/app.png" alt="Embroidermodder 2.0"></img></a>
+  <a name="logo" href="https://libembroidery.org"><img width="10em" align="center" src="icons/app.png" alt="Embroidermodder 2.0"></img></a>
   <br><br>
   <em>EMBROIDERMODDER 2.0 (alpha)</em>
 </h1>
