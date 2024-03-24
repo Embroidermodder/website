@@ -5,24 +5,16 @@ keywords: machine embroidery, embroidery, dst, pes, jef
 ---
 
 <h1 align="center" style="display:block">
-<a name="logo" href="https://libembroidery.org"><img align="center" src="images/icons/app.png" alt="Embroidermodder 2.0"></img></a>
+  <a name="logo" href="https://libembroidery.org"><img align="center" src="icons/app.png" alt="Embroidermodder 2.0"></img></a>
   <br><br>
   <em>EMBROIDERMODDER 2.0 (alpha)</em>
 </h1>
 
-<h3 align="center">
-<a href="https://github.com/Embroidermodder/build-server/actions/workflows/main_build_em2.yml">
-<img src="https://github.com/Embroidermodder/build-server/actions/workflows/main_build_em2.yml/badge.svg"></img>
-</a>
-<a href="https://github.com/Embroidermodder/build-server/actions/workflows/main_test_em2.yml">
-<img src="https://github.com/Embroidermodder/build-server/actions/workflows/main_test_em2.yml/badge.svg"></img>
-</a>
-<br>
-<strong>
-( IN ALPHA DEVELOPMENT: NOT READY FOR SERIOUS USE. )
-</strong>
-</h3>
-
+<center>
+  <strong>
+    ( IN ALPHA DEVELOPMENT: NOT YET READY FOR SERIOUS USE. )
+  </strong>
+</center>
 
 Embroidermodder is a free machine embroidery software program.
 The newest version, Embroidermodder 2 can:
