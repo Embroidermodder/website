@@ -4,12 +4,6 @@ description: Free and Open Source Software for Machine Embroidery.
 keywords: machine embroidery, embroidery, dst, pes, jef
 ---
 
-<h1 align="center" style="display:block">
-  <a name="logo" href="https://libembroidery.org"><img width="10em" align="center" src="icons/app.png" alt="Embroidermodder 2.0"></img></a>
-  <br><br>
-  <em>EMBROIDERMODDER 2.0 (alpha)</em>
-</h1>
-
 <center>
   <strong>
     ( IN ALPHA DEVELOPMENT: NOT YET READY FOR SERIOUS USE. )
@@ -25,7 +19,8 @@ The newest version, Embroidermodder 2 can:
 - upscale or downscale designs
 - run on Windows, Mac and Linux
 
-For more in-depth information, see [our website](http://www.libembroidery.org) and get the manuals [here](http://www.libembroidery.org/documentation).
+For more in-depth information, see [our website](http://www.libembroidery.org)
+and get the manuals [here](http://www.libembroidery.org/documentation).
 
 To try out the software in alpha see our current
 [alpha pre-release](https://github.com/Embroidermodder/Embroidermodder/releases).
@@ -33,7 +28,8 @@ To try out the software in alpha see our current
 Various sample embroidery design files can be found in
 the src/samples folder.
 
-Embroidermodder is developed by The Embroidermodder Team which is maintained as a list on the website under ["Credits"](http://www.libembroidery.org/credits).
+Embroidermodder is developed by The Embroidermodder Team which is maintained as a
+list on the website under ["Credits"](http://www.libembroidery.org/credits).
 
 ## Screenshots
 
