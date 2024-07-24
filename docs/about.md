@@ -83,34 +83,3 @@ GitHub ([https://github.com/Embroidermodder/www.libembroidery.org](https://githu
 The libembroidery library (https://github.com/Embroidermodder/libembroidery)
 became a seperate project in 2018 as a way of supporting other frontends with the
 same file parsing and geometry routines.
-
-## History
-
-Embroidermodder 1 was started by Mark Pontius in 2004 while staying up all night
-with his son in his first couple months. When Mark returned to his day job, he
-lacked the time to continue the project. Mark made the decision to focus on his
-family and work, and in 2005, Mark gave full control of the project to Josh Varga
-so that Embroidermodder could continue its growth.
-
-Embroidermodder 2 was conceived in mid 2011 when Jonathan Greig and Josh Varga
-discussed the possibility of making a cross-platform version. It is currently in
-active development and will run on GNU/Linux, Mac OS X, Microsoft Windows and
-Raspberry Pi.
-
-The source code and binaries for Embroidermodder 1 were hosted on Sourceforge, but
-due to link rot we've lost them.
-
-!!! warning
-
-    TODO: upload a backup here.
-
-The `source code for Embroidermodder 2 <https://github.com/Embroidermodder/Embroidermodder>`_
-was moved to GitHub on July 18, 2013.
-
-`This website <https://github.com/Embroidermodder/docs>`_ was moved
-to GitHub on September 9, 2013. Due to us losing the domain name it was renamed
-to ``www.libembroidery.org`` from ``www.embroidermodder.org``.
-
-The `libembroidery library <https://github.com/Embroidermodder/libembroidery>`_
-became a seperate project in 2018 as a way of supporting other frontends with
-the same file parsing and geometry routines.
