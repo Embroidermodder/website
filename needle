@@ -1,0 +1,179 @@
+#!/bin/bash
+#
+# Built around the matrix strategy method:
+#     https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow
+#
+
+WORKDIR="~/em2_workdir"
+
+function tool_help () {
+
+	cat <<EOF
+This is the parent script that is responsible for running all builds, tests,
+coverage and static analysis. It produces a collection of JSON files representing.
+EOF
+
+}
+
+function make_badge_endpoint () {
+
+	DATE=`date`
+	cat <<'EOF' >"docs/data/badge$4.json"
+{
+    "schemaVersion": 1,
+    "label": "$1",
+    "message": "$2",
+    "color": "$3",
+    "updated": "$DATE"
+}
+EOF
+
+}
+
+function build_test () {
+
+	mkdir -p build
+	cd build
+	PROJECT="$1"
+	OS="$2"
+	BUILD_MESSAGE="failed"
+	BUULD_COLOR="red"
+	TEST_MESSAGE="failed"
+	TEST_COLOR="red"
+	git clone https://github.com/embroidermodder/$PROJECT
+	cd $PROJECT
+		./build.sh --$OS --build
+		if [ $? -eq 0 ]; then
+			BUILD_MESSAGE="passed"
+			BUILD_COLOR="green"
+		fi
+		./build.sh --$OS --test
+		if [ $? -eq 0 ]; then
+			TEST_MESSAGE="passed"
+			TEST_COLOR="green"
+		fi
+	cd ../..
+	make_badge_endpoint "build $OS" $BUILD_MESSAGE $BUILD_COLOR "build-$PROJECT-$OS"
+	make_badge_endpoint "test $OS" $TEST_MESSAGE $TEST_COLOR "test-$PROJECT-$OS"
+
+}
+
+function run_current_em2 () {
+
+        echo "Build current version to see if a build problem has been fixed in the current main."
+        echo "To run this without first installing use:"
+        echo ""
+        echo "    $ wget https://raw.githubusercontent.com/Embroidermodder/website/refs/heads/main/needle"
+        echo "    $ bash needle --current"
+        echo ""
+
+        rm -fr $WORKDIR
+        git clone https://github.com/embroidermodder/embroidermodder $WORKDIR
+        cd $WORKDIR
+        git submodule update --init
+        run_cmake
+        cd build
+        ./embroidermodder2
+
+}
+
+function reduce_colors () {
+
+        for i in images/*.png
+        do
+                echo "Reducing colors of \"$i\"."
+                convert $i +dither -colors 16 -depth 4 a.png
+                mv a.png $i
+        done
+
+}
+
+function clean () {
+
+	rm -fr build
+
+}
+
+function update () {
+
+	git config --global user.email github-actions@github.com
+	git config --global user.name github-actions
+	git add -A status/*
+	git commit -a -m "AUTOMATED: updating status"
+	git fetch
+	git merge
+	git push
+
+}
+
+function build_website () {
+
+	git clone https://github.com/embroidermodder/embroidermodder
+
+	python3 -m pip install --upgrade pip
+	python3 -m venv .
+
+	source bin/activate
+
+	./bin/pip install mkdocs
+	./bin/pip install mkdocs-bibtex
+	./bin/pip install mkdocs-with-pdf
+	./bin/pip install mkdocs-material
+	./bin/pip install mkdocs-table-reader-plugin
+	./bin/pip install markdown-grid-tables
+
+	rm -fr _site
+
+	./bin/mkdocs build
+
+	mv site _site
+
+}
+
+function linux_full () {
+
+	build_test libembroidery linux
+	build_test embroidermodder linux
+	build_test embroideryMobile android
+
+}
+
+function macos_full () {
+
+	build_test libembroidery macos
+	build_test embroidermodder macos
+	build_test embroideryMobile ios
+
+}
+
+function windows_full () {
+
+	build_test libembroidery windows
+	build_test embroidermodder windows
+
+}
+
+if [[ "$#" -eq 0 ]]; then
+	tool_help
+	exit
+fi
+
+case $1 in
+	--website)
+		build_website;;
+	--ubuntu-latest | --linux)
+		linux_full;;
+	--macos-latest)
+		macos_full;;
+	--windows-latest)
+		windows_full;;
+	--update)
+		update;;
+	--clean)
+		clean;;
+	--current)
+		run_current_em2;;
+	*)
+		tool_help;;
+esac
+
