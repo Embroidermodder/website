@@ -1,7 +1,6 @@
 #!/bin/sh
 
-git clone https://github.com/embroidermodder/userman
-git clone https://github.com/embroidermodder/refman
+git clone https://github.com/embroidermodder/embroidermodder
 
 python3 -m pip install --upgrade pip
 python3 -m venv .
