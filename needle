@@ -35,15 +35,7 @@ function update_needle () {
 function make_badge_endpoint () {
 
 	DATE=`date`
-	cat <<'EOF' >"docs/data/$4.json"
-{
-    "schemaVersion": 1,
-    "label": "$1",
-    "message": "$2",
-    "color": "$3",
-    "updated": "$DATE"
-}
-EOF
+	echo {"schemaVersion": 1,"label": "$1","message": "$2","color": "$3","updated": "$DATE"} > docs/data/$4.json
 
 }
 
