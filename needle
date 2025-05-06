@@ -188,7 +188,7 @@ case $1 in
 		update_needle;;
 	--clean)
 		clean;;
-	--needle)
+	--version)
 		echo $NEEDLE_VERSION;;
 	--install-latest)
 		install_current_em2;;
