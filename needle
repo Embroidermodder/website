@@ -167,11 +167,11 @@ case $1 in
 	--website)
 		build_website;;
 	--ubuntu-latest | --linux)
-		build_test_all linux;;
+		linux_full;;
 	--macos-latest)
-		build_test_all macos;;
+		macos_full;;
 	--windows-latest)
-		build_test_all windows;;
+		windows_full;;
 	--update)
 		update;;
 	--clean)
