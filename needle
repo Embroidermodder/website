@@ -32,23 +32,31 @@ function update_needle () {
 
 }
 
-function make_badge_endpoint () {
+function badge () {
 
-	DATE=`date`
-	echo {"schemaVersion": 1,"label": "$1","message": "$2","color": "$3","updated": "$DATE"} > docs/data/$4.json
+	COLOR="red"
+	if [ "$2" = "passed" ]; then
+		COLOR="green"
+	elif [ "$2" = "MIT" ]; then
+		COLOR="yellow"
+	elif [ "$2" = "zlib" ]; then
+		COLOR="yellow"
+	elif [ "$1" = "version" ]; then
+		COLOR="purple"
+	fi
+
+	wget https://img.shields.io/badge/$1-$2-$COLOR -O docs/images/$3.svg
 
 }
 
 function build_test () {
 
 	BUILD_MESSAGE="failed"
-	BUILD_COLOR="red"
 	TEST_MESSAGE="failed"
-	TEST_COLOR="red"
 	PROJECT="$1"
 	OS="$2"
 
-	update_needle
+#	update_needle
 
 	FROM=`pwd`
 	mkdir -p $WORKDIR
@@ -60,22 +68,23 @@ function build_test () {
 	mkdir -p build
 	cd build
 	cmake ..
+
 	cmake --build .
-	if [ $? -eq 0 ]; then
+	BUILD_RESULT=$?
+	if [ $BUILD_RESULT -eq 0 ]; then
 		BUILD_MESSAGE="passed"
-		BUILD_COLOR="green"
 	fi
+
 	cmake --test .
-	if [ $? -eq 0 ]; then
+	TEST_RESULT=$?
+	if [ $TEST_RESULT -eq 0 ]; then
 		TEST_MESSAGE="passed"
-		TEST_COLOR="green"
 	fi
-	cd ../..
 
 	cd $FROM
 
-	make_badge_endpoint "build $OS" $BUILD_MESSAGE $BUILD_COLOR "build-$PROJECT-$OS"
-	make_badge_endpoint "test $OS" $TEST_MESSAGE $TEST_COLOR "test-$PROJECT-$OS"
+	badge "build--$OS" $BUILD_MESSAGE "build-$PROJECT-$OS"
+	badge "test--$OS" $TEST_MESSAGE "test-$PROJECT-$OS"
 
 }
 
