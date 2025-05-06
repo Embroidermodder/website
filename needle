@@ -183,6 +183,8 @@ case $1 in
 		windows_full;;
 	--update)
 		update;;
+	--sharpen)
+		update_needle;;
 	--clean)
 		clean;;
 	--needle)
