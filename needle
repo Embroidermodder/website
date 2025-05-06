@@ -56,6 +56,8 @@ function build_test () {
 	PROJECT="$1"
 	OS="$2"
 
+	update_needle
+
 	FROM=`pwd`
 	mkdir -p $WORKDIR
 	cd $WORKDIR
