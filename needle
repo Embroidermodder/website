@@ -3,8 +3,14 @@
 # Built around the matrix strategy method:
 #     https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow
 #
+# On *nix we assume the FreeDesktop specification as described here:
+#	https://www.freedesktop.org/software/systemd/man/latest/file-hierarchy.html
+#
+# On other systems this is overridden when this script is installed and called.
 
-WORKDIR="~/.embroidermodder2"
+BINDIR="$HOME/.local/bin"
+WORKDIR="$HOME/.local/share/embroidermodder2"
+NEEDLE_VERSION="1.0.0-alpha1"
 
 function tool_help () {
 
@@ -12,6 +18,16 @@ function tool_help () {
 This is the parent script that is responsible for running all builds, tests,
 coverage and static analysis. It produces a collection of JSON files representing.
 EOF
+
+}
+
+function update_needle () {
+
+        wget https://raw.githubusercontent.com/Embroidermodder/website/refs/heads/main/needle
+	mv needle $BINDIR
+
+	echo "Installed new version of needle:"
+	needle --version
 
 }
 
@@ -43,7 +59,7 @@ function build_test () {
 	mkdir -p $WORKDIR
 	cd $WORKDIR
 
-	git clone https://github.com/embroidermodder/embroidermodder
+	git clone https://github.com/embroidermodder/$PROJECT
 	cd $PROJECT
 	git submodule update --init
 	mkdir -p build
@@ -68,17 +84,10 @@ function build_test () {
 
 }
 
-function run_current_em2 () {
-
-        echo "Build current version to see if a build problem has been fixed in the current main."
-        echo "To run this without first installing use:"
-        echo ""
-        echo "    $ wget https://raw.githubusercontent.com/Embroidermodder/website/refs/heads/main/needle"
-        echo "    $ bash needle --current"
-        echo ""
+function install_current_em2 () {
 
 	build_test embroidermodder
-        ./embroidermodder2
+	cp embroidermodder/build/embroidermodder2 $BINDIR
 
 }
 
@@ -176,8 +185,10 @@ case $1 in
 		update;;
 	--clean)
 		clean;;
-	--current)
-		run_current_em2;;
+	--needle)
+		echo $NEEDLE_VERSION;;
+	--install-latest)
+		install_current_em2;;
 	*)
 		tool_help;;
 esac
