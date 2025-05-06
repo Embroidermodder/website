@@ -25,7 +25,7 @@ function update_needle () {
 
 	rm -f $BINDIR/needle
         wget https://raw.githubusercontent.com/Embroidermodder/website/refs/heads/main/needle -O $BINDIR/needle
-	chmod -x $BINDIR/needle
+	chmod +x $BINDIR/needle
 
 	echo "Installed new version of needle:"
 	needle --version
