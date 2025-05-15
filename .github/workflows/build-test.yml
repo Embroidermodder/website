@@ -17,35 +17,35 @@ permissions:
 jobs:
   build-test-linux:
     runs-on: ubuntu-latest
-    uses: ${{ needle_ver }}
+    uses: ${{ env.needle_ver }}
     with:
       os: ubuntu-latest
       flags: --linux --update
 
   build-test-macos:
     runs-on: macos-latest
-    uses: ${{ needle_ver }}
+    uses: ${{ env.needle_ver }}
     with:
       os: macos-latest
       flags: --macos --update
 
   build-test-windows:
     runs-on: windows-latest
-    uses: ${{ needle_ver }}
+    uses: ${{ env.needle_ver }}
     with:
       os: windows-latest
       flags: --windows --update
 
   code-quality:
     runs-on: ubuntu-latest
-    uses: ${{ needle_ver }}
+    uses: ${{ env.needle_ver }}
     with:
       os: ubuntu-latest
       flags: --code-quality --update
 
   build-website:
     runs-on: ubuntu-latest
-    uses: ${{ needle_ver }}
+    uses: ${{ env.needle_ver }}
     with:
       os: ubuntu-latest
       flags: --website
