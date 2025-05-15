@@ -16,28 +16,24 @@ permissions:
 
 jobs:
   build-test-linux:
-    runs-on: ubuntu-latest
     uses: ${{ env.needle_ver }}
     with:
       os: ubuntu-latest
       flags: --linux --update
 
   build-test-macos:
-    runs-on: macos-latest
     uses: ${{ env.needle_ver }}
     with:
       os: macos-latest
       flags: --macos --update
 
   build-test-windows:
-    runs-on: windows-latest
     uses: ${{ env.needle_ver }}
     with:
       os: windows-latest
       flags: --windows --update
 
   code-quality:
-    runs-on: ubuntu-latest
     uses: ${{ env.needle_ver }}
     with:
       os: ubuntu-latest
@@ -45,11 +41,11 @@ jobs:
 
   build-website:
     runs-on: ubuntu-latest
-    uses: ${{ env.needle_ver }}
-    with:
-      os: ubuntu-latest
-      flags: --website
     steps:
+    - uses: ${{ env.needle_ver }}
+      with:
+        os: ubuntu-latest
+        flags: --website
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
 
