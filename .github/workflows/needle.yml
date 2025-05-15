@@ -1,0 +1,30 @@
+name: needle
+
+on:
+  workflow_call:
+    inputs:
+      os:
+        required: true
+        type: string
+      flags:
+        required: true
+        type: string
+    secrets:
+      personal_access_token:
+        required: true
+
+jobs:
+  getneedle:
+    runs-on: ${{ inputs.os }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.head_ref }}
+    - name: Get Needle
+      run: |
+        wget https://raw.githubusercontent.com/Embroidermodder/website/refs/heads/main/needle -O needle
+        chmod +x needle
+    - name: Sew
+      run: |
+        ./needle ${{ inputs.flags }}

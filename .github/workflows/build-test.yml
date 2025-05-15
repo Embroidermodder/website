@@ -1,0 +1,57 @@
+name: Main Script
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 3 * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: build-test
+      uses: embroidermodder/embroidermodder/.github/workflows/needle.yml
+      with:
+        os: ${{ matrix.os }}
+        flags: --${{ matrix.os }} --update
+
+  code-quality:
+    runs-on: ubuntu-latest
+    steps:
+    - name: code-quality
+      uses: embroidermodder/embroidermodder/.github/workflows/needle.yml
+      with:
+        os: ubuntu-latest
+        flags: --code-quality --update
+
+  build-website:
+    runs-on: ubuntu-latest
+    steps:
+    - name: build
+      uses: embroidermodder/embroidermodder/.github/workflows/needle.yml
+      with:
+        os: ubuntu-latest
+        flags: --website
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build-website
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
