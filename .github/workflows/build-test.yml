@@ -16,11 +16,12 @@ permissions:
 
 jobs:
   build-test-linux:
-    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.1.0
+    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.2
     with:
       name: build_test_linux
       os: ubuntu-latest
       flags: --linux --update
+      github-token: ${{ secrets.GITHUB_TOKEN }}
 
   build-test-macos:
     uses: embroidermodder/needle/.github/workflows/needle.yml@v1.1.0
@@ -28,6 +29,7 @@ jobs:
       name: build_test_macos
       os: macos-latest
       flags: --macos --update
+      github-token: ${{ secrets.GITHUB_TOKEN }}
 
   build-test-windows:
     uses: embroidermodder/needle/.github/workflows/needle.yml@v1.1.0
@@ -35,6 +37,7 @@ jobs:
       name: build_test_windows
       os: windows-latest
       flags: --windows --update
+      github-token: ${{ secrets.GITHUB_TOKEN }}
 
   code-quality:
     uses: embroidermodder/needle/.github/workflows/needle.yml@v1.1.0
@@ -42,6 +45,7 @@ jobs:
       name: code_quality
       os: ubuntu-latest
       flags: --code-quality --update
+      github-token: ${{ secrets.GITHUB_TOKEN }}
 
   build-website:
     uses: embroidermodder/needle/.github/workflows/needle.yml@v1.1.0
@@ -49,6 +53,7 @@ jobs:
       name: website
       os: ubuntu-latest
       flags: --website
+      github-token: ${{ secrets.GITHUB_TOKEN }}
 
 #  upload-pages-website:
 #    uses: actions/upload-pages-artifact@v3
