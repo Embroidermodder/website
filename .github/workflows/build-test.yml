@@ -6,6 +6,9 @@ on:
   schedule:
     - cron: "15 3 * * *"
 
+env:
+  needle_ver: 7602116ef97ad9521d6bd0fa24efa6d056bd9382
+
 permissions:
   contents: write
   pages: write
@@ -19,7 +22,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - name: build-test
-      uses: embroidermodder/embroidermodder/.github/workflows/needle.yml
+      uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
       with:
         os: ${{ matrix.os }}
         flags: --${{ matrix.os }} --update
@@ -28,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: code-quality
-      uses: embroidermodder/embroidermodder/.github/workflows/needle.yml
+      uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
       with:
         os: ubuntu-latest
         flags: --code-quality --update
@@ -37,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: build
-      uses: embroidermodder/embroidermodder/.github/workflows/needle.yml
+      uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
       with:
         os: ubuntu-latest
         flags: --website
