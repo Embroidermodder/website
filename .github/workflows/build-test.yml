@@ -7,7 +7,7 @@ on:
   #  - cron: "15 3 * * *"
 
 env:
-  needle_ver: embroidermodder/website/.github/workflows/needle.yml@v1.0.0
+  needle_ver: embroidermodder/website/.github/workflows/needle.yml@v1.1.0
 
 permissions:
   contents: write
@@ -18,24 +18,28 @@ jobs:
   build-test-linux:
     uses: ${{ env.needle_ver }}
     with:
+      name: build_test_linux
       os: ubuntu-latest
       flags: --linux --update
 
   build-test-macos:
     uses: ${{ env.needle_ver }}
     with:
+      name: build_test_macos
       os: macos-latest
       flags: --macos --update
 
   build-test-windows:
     uses: ${{ env.needle_ver }}
     with:
+      name: build_test_windows
       os: windows-latest
       flags: --windows --update
 
   code-quality:
     uses: ${{ env.needle_ver }}
     with:
+      name: code_quality
       os: ubuntu-latest
       flags: --code-quality --update
 
@@ -44,6 +48,7 @@ jobs:
     steps:
     - uses: ${{ env.needle_ver }}
       with:
+        name: website
         os: ubuntu-latest
         flags: --website
     - name: Upload artifact
