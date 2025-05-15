@@ -51,7 +51,7 @@ jobs:
     uses: embroidermodder/needle/.github/workflows/needle.yml@v1.6
     with:
       name: github-pages
-      path: _site
+      path: artifact.tar
       os: ubuntu-latest
       flags: --website
 
