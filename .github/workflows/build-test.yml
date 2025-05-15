@@ -7,7 +7,7 @@ on:
     - cron: "15 3 * * *"
 
 env:
-  needle_ver: 7602116ef97ad9521d6bd0fa24efa6d056bd9382
+  needle_ver: embroidermodder/website/.github/workflows/needle.yml@7602116ef97ad9521d6bd0fa24efa6d056bd9382
 
 permissions:
   contents: write
@@ -17,35 +17,35 @@ permissions:
 jobs:
   build-test-linux:
     runs-on: ubuntu-latest
-    uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
+    uses: ${{ needle_ver }}
     with:
       os: ubuntu-latest
       flags: --linux --update
 
   build-test-macos:
     runs-on: macos-latest
-    uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
+    uses: ${{ needle_ver }}
     with:
       os: macos-latest
       flags: --macos --update
 
   build-test-windows:
     runs-on: windows-latest
-    uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
+    uses: ${{ needle_ver }}
     with:
       os: windows-latest
       flags: --windows --update
 
   code-quality:
     runs-on: ubuntu-latest
-    uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
+    uses: ${{ needle_ver }}
     with:
       os: ubuntu-latest
       flags: --code-quality --update
 
   build-website:
     runs-on: ubuntu-latest
-    uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
+    uses: ${{ needle_ver }}
     with:
       os: ubuntu-latest
       flags: --website
