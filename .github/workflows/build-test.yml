@@ -41,15 +41,14 @@ jobs:
       flags: --code-quality --update
 
   build-website:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: embroidermodder/website/.github/workflows/needle.yml@v1.1.0
-      with:
-        name: website
-        os: ubuntu-latest
-        flags: --website
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+    uses: embroidermodder/website/.github/workflows/needle.yml@v1.1.0
+    with:
+      name: website
+      os: ubuntu-latest
+      flags: --website
+
+#  upload-pages-website:
+#    uses: actions/upload-pages-artifact@v3
 
   deploy:
     needs: build-website
