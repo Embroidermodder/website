@@ -21,7 +21,7 @@ jobs:
       name: build_test_linux
       path: results.dat
       os: ubuntu-latest
-      flags: --linux --update
+      flags: --linux
 
   build-test-macos:
     uses: embroidermodder/needle/.github/workflows/needle.yml@v1.6
@@ -29,7 +29,7 @@ jobs:
       name: build_test_macos
       path: results.dat
       os: macos-latest
-      flags: --macos --update
+      flags: --macos
 
   build-test-windows:
     uses: embroidermodder/needle/.github/workflows/needle.yml@v1.6
@@ -37,7 +37,7 @@ jobs:
       name: build_test_windows
       path: results.dat
       os: windows-latest
-      flags: --windows --update
+      flags: --windows
 
   code-quality:
     uses: embroidermodder/needle/.github/workflows/needle.yml@v1.6
@@ -45,7 +45,7 @@ jobs:
       name: code_quality
       path: results.dat
       os: ubuntu-latest
-      flags: --code-quality --update
+      flags: --code-quality
 
   build-website:
     uses: embroidermodder/needle/.github/workflows/needle.yml@v1.6
@@ -54,9 +54,6 @@ jobs:
       path: artifact.tar
       os: ubuntu-latest
       flags: --website
-
-#  upload-pages-website:
-#    uses: actions/upload-pages-artifact@v3
 
   deploy:
     needs: build-website
