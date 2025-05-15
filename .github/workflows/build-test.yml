@@ -16,35 +16,35 @@ permissions:
 
 jobs:
   build-test-linux:
-    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.2
+    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.3
     with:
       name: build_test_linux
       os: ubuntu-latest
       flags: --linux --update
 
   build-test-macos:
-    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.1.0
+    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.3
     with:
       name: build_test_macos
       os: macos-latest
       flags: --macos --update
 
   build-test-windows:
-    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.1.0
+    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.3
     with:
       name: build_test_windows
       os: windows-latest
       flags: --windows --update
 
   code-quality:
-    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.1.0
+    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.3
     with:
       name: code_quality
       os: ubuntu-latest
       flags: --code-quality --update
 
   build-website:
-    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.1.0
+    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.3
     with:
       name: website
       os: ubuntu-latest
