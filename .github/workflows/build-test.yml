@@ -7,7 +7,7 @@ on:
     - cron: "15 3 * * *"
 
 env:
-  needle_ver: embroidermodder/website/.github/workflows/needle.yml@7602116ef97ad9521d6bd0fa24efa6d056bd9382
+  needle_ver: embroidermodder/website/.github/workflows/needle.yml@v1.0.0
 
 permissions:
   contents: write
