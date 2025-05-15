@@ -15,35 +15,41 @@ permissions:
   id-token: write
 
 jobs:
-  build-test:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
-    steps:
-    - name: build-test
-      uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
-      with:
-        os: ${{ matrix.os }}
-        flags: --${{ matrix.os }} --update
+  build-test-linux:
+    runs-on: ubuntu-latest
+    uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
+    with:
+      os: ubuntu-latest
+      flags: --linux --update
+
+  build-test-macos:
+    runs-on: macos-latest
+    uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
+    with:
+      os: macos-latest
+      flags: --macos --update
+
+  build-test-windows:
+    runs-on: windows-latest
+    uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
+    with:
+      os: windows-latest
+      flags: --windows --update
 
   code-quality:
     runs-on: ubuntu-latest
-    steps:
-    - name: code-quality
-      uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
-      with:
-        os: ubuntu-latest
-        flags: --code-quality --update
+    uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
+    with:
+      os: ubuntu-latest
+      flags: --code-quality --update
 
   build-website:
     runs-on: ubuntu-latest
+    uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
+    with:
+      os: ubuntu-latest
+      flags: --website
     steps:
-    - name: build
-      uses: embroidermodder/website/.github/workflows/needle.yml@${{ needle_ver }}
-      with:
-        os: ubuntu-latest
-        flags: --website
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
 
