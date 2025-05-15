@@ -2,9 +2,9 @@ name: Main Script
 
 on:
   workflow_dispatch:
-  #push:
-  #schedule:
-  #  - cron: "15 3 * * *"
+  push:
+  schedule:
+    - cron: "15 3 * * *"
 
 permissions:
   contents: write
