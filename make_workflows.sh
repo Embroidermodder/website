@@ -71,12 +71,12 @@ fi
 
 for PROJECT in libembroidery embroidermodder embroideryMobile
 do
-  for OS in linux macos windows
+  for OSSHORT in linux macos windows
   do
-      FNAME=".github/workflows/build-$PROJECT-$OS.yml"
-      workflow $OS build $PROJECT $FNAME
+      FNAME=".github/workflows/build-$PROJECT-$OSSHORT.yml"
+      workflow $OSSHORT build $PROJECT $FNAME
 
-      FNAME=".github/workflows/test-$PROJECT-$OS.yml"
-      workflow $OS test $PROJECT $FNAME
+      FNAME=".github/workflows/test-$PROJECT-$OSSHORT.yml"
+      workflow $OSSHORT test $PROJECT $FNAME
   done
 done

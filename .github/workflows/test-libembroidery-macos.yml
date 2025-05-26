@@ -1,4 +1,4 @@
-name: test Windows
+name: test Mac OS
 
 on:
   workflow_dispatch:
@@ -6,8 +6,8 @@ on:
     - cron: "15 6 * * *"
 
 jobs:
-  build-windows-latest:
-    runs-on: windows-latest
+  build-macos-latest:
+    runs-on: macos-latest
     steps:
       - name: test
         run:
