@@ -1,6 +1,18 @@
 # Documentation
 
-## Overview
+WARNING: These are very incomplete and cover hundreds of pages so it will take some
+time to complete them. We hope to lift this warning by 2026.
+
+These are living documents: if there's an error first check that it is present
+in the current live versions (the web links below) before reporting an error.
+
+When reporting issues, please quote the date of the copy you have like this
+"Embroidermodder Reference Manual (26 May 2025)". They are housed in the repositories
+for each of the projects they refer to and are under the GNU Free Documentation License,
+the only gotcha is that the command line interface `embroider` is part of the
+`libembroidery` repository and doesn't have it's own.
+
+## Overview of Project Statuses
 
 | **Project** | **Attribute** |
 |-------------|---------------|
@@ -9,25 +21,35 @@
 | `embroideryMobile` | ![embroideryMobile version](./images/embroiderymobile-version.svg) ![embroiderymobile license](./images/libembroidery-license.svg) ![embroideryMobile build android](./images/build-embroiderymobile-android.svg) ![embroideryMobile test android](./images/test-embroiderymobile-android.svg) ![embroideryMobile build ios](./images/build-embroiderymobile-ios.svg) ![embroideryMobile test ios](./images/test-embroiderymobile-ios.svg) |
 | `website` | [![Deploy website](https://github.com/Embroidermodder/website/actions/workflows/website.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/website.yml) |
 
-## User
+## User Reference Manuals
 
-User Manual: [A4](downloads/em2_current.pdf) and
-[US letter paper](downloads/em2_current.pdf).
+For users of the libembroidery library, please use the developer manual.
 
-Currently, the manual made up of the notes for the various
-projects maintained in [this repository](https://github.com/embroidermodder/userman).
+* embroidermodder
+  * [html](docs/embroidermodder/html/index.html)
+  * [A4](docs/embroidermodder_2_current.pdf)
+  * [US letter](docs/embroidermodder_2_current_us.pdf)
+* embroider manpage
+  * [plain text](docs/embroider.txt)
+  * [PDF (A4)](docs/embroider.pdf)
+  * [PDF (US letter)](docs/embroider_us.pdf)
+* embroideryMobile
+  * [html](docs/embroideryMobile/html/index.html)
+  * [A4](docs/embroideryMobile_1_current.pdf)
+  * [US letter](docs/embroideryMobile_1_current_us.pdf)
 
-This is a living document: if there's an error first check that it is present
-in the url before reporting an error.
+## Developer/API Manuals
 
-## Developer
+* libembroidery
+  * [html](docs/libembroidery/index.html)
+  * [A4](downloads/em2_current.pdf)
+  * [US letter](downloads/em2_current.pdf)
+* embroidermodder
+  * [html](docs/embroidermodder/index.html)
+  * [A4](docs/em2_current.pdf)
+  * [US letter](docs/em2_current.pdf)
+* embroideryMobile
+  * [html](docs/embroideryMobile/index.html)
+  * [A4](docs/em2_current.pdf)
+  * [US letter](docs/em2_current.pdf)
 
-If you're interested in using our tools in your own project there's
-a single reference manual for all Embroidermodder projects available
-in two formats: [A4](downloads/emrm.pdf) and
-[US letter paper](downloads/emrm.pdf). This is a living document that
-is timestamped, if you need to refer to it please include an accessed
-date like "EMRM (24 Jul 2024)".
-
-The source for these documents is maintained in
-[this repository](https://github.com/embroidermodder/refman).
