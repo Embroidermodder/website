@@ -1,0 +1,16 @@
+name: build Mac OS
+
+os:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 6 * * *"
+
+jobs:
+  build-macos-latest:
+    runs-on: macos-latest
+    steps:
+      - name: build
+        run:
+          git clone http://github.com/embroidermodder/embroidermodder
+          cmake embroidermodder
+          cmake --build .

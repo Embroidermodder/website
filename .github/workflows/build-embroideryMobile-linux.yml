@@ -1,0 +1,16 @@
+name: build GNU/Linux
+
+os:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 6 * * *"
+
+jobs:
+  build-ubuntu-latest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run:
+          git clone http://github.com/embroidermodder/embroideryMobile
+          cmake embroideryMobile
+          cmake --build .

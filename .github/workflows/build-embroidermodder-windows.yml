@@ -1,0 +1,16 @@
+name: build Windows
+
+os:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 6 * * *"
+
+jobs:
+  build-windows-latest:
+    runs-on: windows-latest
+    steps:
+      - name: build
+        run:
+          git clone http://github.com/embroidermodder/embroidermodder
+          cmake embroidermodder
+          cmake --build .

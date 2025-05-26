@@ -1,0 +1,17 @@
+name: test Windows
+
+os:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 6 * * *"
+
+jobs:
+  build-windows-latest:
+    runs-on: windows-latest
+    steps:
+      - name: test
+        run:
+          git clone http://github.com/embroidermodder/libembroidery
+          cmake libembroidery
+          cmake --build .
+          cmake --test .
