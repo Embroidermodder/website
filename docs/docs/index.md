@@ -21,11 +21,9 @@ the only gotcha is that the command line interface `embroider` is part of the
 
 ![embroidermodder version](images/embroidermodder-version.svg)
 ![embroidermodder license](images/embroidermodder-license.svg)
-
-|   |  GNU/Linux | Mac OS | Windows |
-|---|---|----|----|
-| build | [![embroidermodder build linux](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-[linux.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-linux.yml) | [![embroidermodder build macos](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-macos.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-macos.yml) | [![embroidermodder build windows](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-windows.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-windows.yml) |
-| test | [![embroidermodder test linux](https://github.com/Embroidermodder/website/actions/workflows/test-embroidermodder-[linux.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-embroidermodder-linux.yml) | [![embroidermodder test macos](https://github.com/Embroidermodder/website/actions/workflows/test-embroidermodder-macos.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-embroidermodder-macos.yml) | [![embroidermodder test windows](https://github.com/Embroidermodder/website/actions/workflows/test-embroidermodder-windows.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-embroidermodder-windows.yml) |
+[![embroidermodder build linux](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-linux.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-linux.yml)
+[![embroidermodder build macos](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-macos.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-macos.yml)
+[![embroidermodder build windows](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-windows.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-embroidermodder-windows.yml)
 
 Embroidermodder Reference Manaul (`EMRM`)
 * [html](embroidermodder/man)
@@ -41,11 +39,12 @@ Embroidermodder API Manual (`EMAPI`)
 
 ![libembroidery version](images/libembroidery-version.svg)
 ![libembroidery license](images/libembroidery-license.svg)
-
-|    | GNU/Linux | Mac OS | Windows |
-|----|-----------|--------|---------|
-| build | [![libembroidery build linux](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-linux.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-linux.yml) | [![libembroidery build macos](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-macos.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-macos.yml) | [![libembroidery build windows](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-windows.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-windows.yml) |
-| test | [![libembroidery test linux](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-linux.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-linux.yml) | [![libembroidery test macos](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-macos.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-macos.yml) | [![libembroidery test windows](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-windows.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-windows.yml) |
+[![libembroidery build linux](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-linux.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-linux.yml)
+[![libembroidery build macos](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-macos.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-macos.yml)
+[![libembroidery build windows](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-windows.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-libembroidery-windows.yml)
+[![libembroidery test linux](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-linux.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-linux.yml)
+[![libembroidery test macos](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-macos.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-macos.yml)
+[![libembroidery test windows](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-windows.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-libembroidery-windows.yml)
 
 For users of the libembroidery library, please use the developer manual.
 
@@ -68,11 +67,8 @@ Man page:
 
 ![embroideryMobile version](images/embroiderymobile-version.svg)
 ![embroiderymobile license](images/libembroidery-license.svg)
-
-|    | Android (`ubuntu-latest`) | iOS (`macos-latest`) |
-|----|-----------|--------|
-| build | [![embroideryMobile build android](https://github.com/Embroidermodder/website/actions/workflows/build-embroideryMobile-android.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-embroideryMobile-android.yml) | [![embroideryMobile build ios](https://github.com/Embroidermodder/website/actions/workflows/build-embroideryMobile-ios.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-embroideryMobile-ios.yml) |
-| test | [![embroideryMobile test android](https://github.com/Embroidermodder/website/actions/workflows/test-embroideryMobile-anroid.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-embroideryMobile-android.yml) | [![embroideryMobile test ios](https://github.com/Embroidermodder/website/actions/workflows/test-embroideryMobile-ios.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/test-embroideryMobile-ios.yml) |
+[![embroideryMobile build android](https://github.com/Embroidermodder/website/actions/workflows/build-embroideryMobile-android.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-embroideryMobile-android.yml)
+[![embroideryMobile build ios](https://github.com/Embroidermodder/website/actions/workflows/build-embroideryMobile-ios.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/build-embroideryMobile-ios.yml)
 
 EmbroideryMobile Reference Manual (`MOBRM`)
 * [html](embroideryMobile/man)
