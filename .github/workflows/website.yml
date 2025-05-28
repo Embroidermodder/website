@@ -13,12 +13,49 @@ permissions:
 
 jobs:
   build-website:
-    uses: embroidermodder/needle/.github/workflows/needle.yml@v1.6
-    with:
-      name: github-pages
-      path: artifact.tar
-      os: ubuntu-latest
-      flags: --website
+    runs-on: ubuntu-latest
+    steps:
+    - name: build
+      run: |
+        git clone https://github.com/embroidermodder/website
+        cd website
+
+        python3 -m pip install --upgrade pip
+        python3 -m venv .
+
+        source bin/activate
+
+        ./bin/pip install mkdocs
+        ./bin/pip install mkdocs-material
+        ./bin/pip install markdown-grid-tables
+
+        # Include documentation from our other repositories
+        cd docs/docs/
+        mkdir temp
+        cd temp
+        git clone https://github.com/embroidermodder/embroidermodder
+        git clone https://github.com/embroidermodder/libembroidery
+        git clone https://github.com/embroidermodder/embroideryMobile
+        cd ..
+        mv temp/embroidermodder/docs/html embroidermodder
+        mv temp/libembroidery/docs/html libembroidery
+        mv temp/embroideryMobile/docs/html embroideryMobile
+        rm -fr temp
+        cd ../..
+
+        rm -fr site
+        ./bin/mkdocs build
+        mv site ..
+
+        cd ..
+
+        tar --dereference --hard-dereference --directory site \
+                -cvf artifact.tar --exclude=".[^/]*" .
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: pages
+        path: artifact.tar
 
   deploy:
     needs: build-website
