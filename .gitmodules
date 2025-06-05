@@ -1,0 +1,9 @@
+[submodule "embroidermodder"]
+	path = embroidermodder
+	url = ./embroidermodder/
+[submodule "libembroidery"]
+	path = libembroidery
+	url = git@github.com:embroidermodder/libembroidery
+[submodule "EmbroideryMobile"]
+	path = EmbroideryMobile
+	url = git@github.com:embroidermodder/EmbroideryMobile
