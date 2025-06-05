@@ -8,7 +8,7 @@ nav:
   - 'Home': 'index.md'
   - 'Downloads': 'downloads/index.md'
   - 'About': 'about.md'
-  - 'Documentation': 'documentation.md'
+  - 'Documentation': 'docs/index.md'
   - 'Testing': 'testing.md'
   - 'Contact': 'contact.md'
   - 'Donate': https://opencollective.com/embroidermodder
