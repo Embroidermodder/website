@@ -1,6 +1,6 @@
 # Embroidermodder Project Website
 
-[![Deploy website](https://github.com/Embroidermodder/website/actions/workflows/tool.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/tool.yml)
+[![Deploy website](https://github.com/Embroidermodder/website/actions/workflows/website.yml/badge.svg)](https://github.com/Embroidermodder/website/actions/workflows/website.yml)
 
 This directory is under GNU FDL 1.3 except for large code quotations which are under the license [here](https://github.com/embroidermodder/embroidermodder).
 
