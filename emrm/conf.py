@@ -1,0 +1,35 @@
+# Configuration file for the Sphinx documentation builder.
+#
+# For the full list of built-in configuration values, see the documentation:
+# https://www.sphinx-doc.org/en/master/usage/configuration.html
+
+# -- Project information -----------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+
+project = 'Embroidermodder'
+copyright = '2025, The Embroidermodder Team'
+author = 'The Embroidermodder Team'
+release = '2.0.0-alpha'
+description = "A suite of free and open source software for machine embroidery."
+
+# -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+
+extensions = []
+
+templates_path = ['_templates']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+# -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+
+html_theme = "furo"
+html_static_path = ['_static']
+html_copy_source = True
+html_show_sourcelink = True
+html_theme_options = {
+    'logo': 'images/logo_embroidermodder_2_0.png',
+    "source_repository": "https://github.com/embroidermodder/website",
+    "source_branch": "main",
+    "source_directory": "emrm/"
+}

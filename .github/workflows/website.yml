@@ -15,8 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: build
-      run: bash bin/package.sh
+    - name: build website
+      run: bash build.sh
 
     - name: Upload static files as artifact
       id: deployment
