@@ -8,7 +8,7 @@ nav:
   - 'Home': 'index.md'
   - 'Downloads': 'downloads/index.md'
   - 'About': 'about.md'
-  - 'Documentation': 'docs/index.md'
+  - 'Documentation': 'docs/index.html'
   - 'Testing': 'testing.md'
   - 'Contact': 'contact.md'
   - 'Donate': https://opencollective.com/embroidermodder
@@ -31,3 +31,4 @@ markdown_extensions:
   - pymdownx.superfences
   - footnotes
   - markdown_grid_tables
+
