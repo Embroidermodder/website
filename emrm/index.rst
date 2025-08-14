@@ -12,6 +12,7 @@ The Embroidermodder Reference Manual
    dedication
    credits
    introduction
+   code
    needle
    embroider
    LICENSE
