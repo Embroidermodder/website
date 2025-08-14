@@ -34,7 +34,7 @@ source bin/activate
 # Sphinx style
 ./bin/pip install furo
 # C docstring extraction
-./bin/pip install hawkmoth
+./bin/pip install breathe
 
 cd emrm
 make html
