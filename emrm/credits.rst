@@ -1,9 +1,10 @@
 Credits for Embroidermodder 2, libembroidery and all other related code
 =======================================================================
 
-If you have contributed and wish to be added to this list, alter the  README on Embroidermodder
-github page (https://github.com/Embroidermodder/Embroidermodder) and we'll copy it to the
-libembroidery source code since that is credited to ``The Embroidermodder Team``.
+If you have contributed and wish to be added to this list, alter the README on
+Embroidermodder github page (https://github.com/Embroidermodder/Embroidermodder)
+and we'll copy it to the libembroidery source code since that is credited to
+``The Embroidermodder Team``.
 
 The Embroidermodder Team
 ------------------------
@@ -31,9 +32,6 @@ Here is a summary of the values used:
 `Bindings`      If you have contributed programming language bindings for libembroidery, set this to true.
 `Commands`      If you have contributed a command for Embroidermodder 2, set this to true.
 ==============  =====================================================================
-
-Contributors
-------------
 
 The full list of contributors are, based on the contents of `CREDITS.ini`:
 

@@ -1,9 +1,0 @@
-[submodule "emrm/embroidermodder"]
-	path = emrm/embroidermodder
-	url = https://github.com/embroidermodder/embroidermodder
-[submodule "emrm/libembroidery"]
-	path = emrm/libembroidery
-	url = https://github.com/embroidermodder/libembroidery
-[submodule "emrm/embroiderymobile"]
-	path = emrm/embroiderymobile
-	url = https://github.com/embroidermodder/embroiderymobile

@@ -3,20 +3,16 @@
 # WARNING: This assumes we are running on Debian or a derivative.
 sudo apt install python3-clang git doxygen
 
-git submodule init
-git submodule update
-
 # Run on latest version of docstrings -- eventually these will be tagged.
-cd emrm/embroidermodder
-git pull origin main
-doxygen
-cd ../..
-cd emrm/libembroidery
-git pull origin main
-cd ../..
-cd emrm/embroiderymobile
-git pull origin main
-cd ../..
+cd emrm
+	git clone https://github.com/embroidermodder/embroidermodder
+	cd embroidermodder
+		git pull origin main
+		git submodule init
+		git submodule update
+		doxygen
+	cd ..
+cd ..
 
 python3 -m pip install --upgrade pip
 python3 -m venv .
@@ -35,8 +31,9 @@ source bin/activate
 ./bin/pip install breathe
 
 cd emrm
-make html
-mv _build/html ../docs/docs
+	make html
+	mkdir -p ../docs/docs
+	mv _build/html/* ../docs/docs
 cd ..
 
 ./bin/mkdocs build
