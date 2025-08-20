@@ -3,40 +3,6 @@ House Style
 
 A basic set of guidelines to use when submitting code.
 
-Indentation and Braces
-~~~~~~~~~~~~~~~~~~~~~~
-
-Tabs should not be used when indenting. Setup your IDE or text editor to use 4 spaces.
-
-For functions: please put each brace on a new line::
-
-	void
-	function_definition(int argument)
-	{
-	    /* code block */
-	}
-
-For control statements: please put the first brace on the same line::
-
-	if (condition) {
-	    /* code block */    
-	}
-
-There is an exception to this control statement rule which is for switch statements::
-
-	switch (variable) {
-	/* The case statement lies on the same level as the switch. */
-	case NAME: {
-	    /* code block: the braces are here to allow for local scope variables */
-	    break;
-    }
-    default:
-        /* If the default doesn't have a new variable, then we don't need braces
-         * around the break.
-         */
-        break;
-	}
-
 Naming Conventions
 ~~~~~~~~~~~~~~~~~~
 
@@ -50,12 +16,54 @@ Naming Conventions
 #. All files and directories shall be lowercase and contain no spaces.
 #. Do not repeat a variable name that already occurs in an outer scope.
 
-When using braces, please put the brace on a new line, unless the code is specially formatted
-for easier reading such as a block of one liner if/else statements.
+When using braces, please put the brace on a new line, unless the code
+is specially formatted for easier reading such as a block of one liner
+if/else statements.
 
 Use exceptions sparingly.
 
 Do not use ternary operator (?:) in place of if/else.
+
+Indentation and Braces
+~~~~~~~~~~~~~~~~~~~~~~
+
+Tabs should not be used when indenting. Setup your IDE or text editor to use 4 spaces.
+
+For functions: please put each brace on a new line::
+
+.. codeblock::
+
+   void
+   function_definition(int argument)
+   {
+	   /* code block */
+   }
+
+For control statements: please put the first brace on the same line::
+
+.. codeblock::
+
+   if (condition) {
+	   /* code block */    
+   }
+
+There is an exception to this control statement rule which is for switch statements::
+
+.. codeblock::
+
+   switch (variable) {
+   /* The case statement lies on the same level as the switch. */
+   case NAME: {
+	   /* code block: the braces are here to allow for local scope variables */
+       break;
+   }
+   default:
+       /* If the default doesn't have a new variable, then we don't need braces
+        * around the break.
+        */
+       break;
+   }
+
 
 Version Control
 ~~~~~~~~~~~~~~~
@@ -86,19 +94,21 @@ libembroidery is written in C and adheres to C89 standards. This means
 that any C99 or C++ comments will show up as errors when compiling with
 gcc. In any C code, you must use::
 
-    /* C Style Comments */
+.. codeblock::
 
-    /* TODO: This code clearly needs more work or further review. */
-
-    /* BUG: This code is definitely wrong. It needs fixed. */
-
-    /* HACK: This code shouldn't be written this way or I don't feel
-     * right about it. There may a better solution */
-
-    /* WARNING: Think twice (or more times) before changing this code.
-     * I put this here for a good reason. */
-
-    /* NOTE: This comment is much more important than lesser comments. */
+   /* C Style Comments */
+   
+   /* TODO: This code clearly needs more work or further review. */
+   
+   /* BUG: This code is definitely wrong. It needs fixed. */
+   
+   /* HACK: This code shouldn't be written this way or I don't feel
+    * right about it. There may a better solution */
+   
+   /* WARNING: Think twice (or more times) before changing this code.
+    * I put this here for a good reason. */
+   
+   /* NOTE: This comment is much more important than lesser comments. */
 
 These are rules for the general intended style of Embroidermodder's GUI source
 code. Not included are anything that a compiler will warn you about: fixing

@@ -43,4 +43,3 @@ Graphics:
 
 Quality Assurance:
     -test       Run the test suite.
-
