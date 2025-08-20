@@ -1,0 +1,9 @@
+new
+---
+
+| index | arguments | flags |
+|------|------|------|
+| 52 | none | |
+
+Create a new EmbPattern with a new tab in the GUI.
+

@@ -12,10 +12,48 @@ the prompt similar to a `GCODE` file.
 These are available on all platorms but with various levels of support and
 applicability.
 
-
-
 CAD command review
-~~~~~~~~~~~~~~~~~~
+------------------
+
+.. toctree::
+   :caption: Commands
+
+   commands/000-about.rst
+   commands/001-add-arc.rst
+   commands/002-add-circle.rst
+   commands/003-add-dim-leader.rst
+   commands/004-add-ellipse.rst
+   commands/005-add-geometry.rst
+   commands/006-add-horizontal-dimension.rst
+   commands/007-add-image.rst
+   commands/008-add-infinite-line.rst
+   commands/009-add-line.rst
+   commands/010-add-path.rst
+   commands/011-add-point.rst
+   commands/012-add-polygon.rst
+   commands/013-add-polyline.rst
+   commands/014-add-ray.rst
+   commands/015-add-rectangle.rst
+   commands/016-add-regular-polygon.rst
+   commands/017-add-rounded-rectangle.rst
+   commands/018-add-rubber.rst
+   commands/019-add-slot.rst
+   commands/020-add-text-multi.rst
+   commands/021-add-text-single.rst
+   commands/022-add-to-selection.rst
+   commands/023-add-triangle.rst
+   commands/024-add-vertical-dimension.rst
+   commands/025-alert.rst
+   commands/141-show-all-layers.rst
+   commands/142-freeze-all-layers.rst
+   commands/155-rotate.rst
+   commands/156-sandbox.rst
+   commands/157-add-snowflake.rst
+   commands/158-add-star.rst
+   commands/159-delete.rst
+   commands/160-scale.rst
+   commands/161-single-line-text.rst
+   commands/162-syswindows.rst
 
 %cad_desc.csv
 
@@ -133,439 +171,6 @@ more shortcuts and macros
 46 & heart |
 \end{tabular}
 
-ADD-GEOMETRY
-~~~~~~~~~~~~
-
-============== ===================
-**index**      5
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-HORIZONTAL-DIMENSION
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-============== ===================
-**index**      6
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-
-ADD-IMAGE
-~~~~~~~~~
-
-============== ===================
-**index**      7
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-INFINITE-LINE
-~~~~~~~~~~~~~~~~~
-
-============== ===================
-**index**      8
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-
-ADD-LINE
-~~~~~~~~
-
-============== ===================
-**index**      9
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-PATH
-~~~~~~~~
-
-============== ===================
-**index**      10
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-POINT
-~~~~~~~~~
-
-============== ===================
-**index**      11
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-POLYGON
-~~~~~~~~~~~
-
-============== ===================
-**index**      12
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-POLYLINE
-~~~~~~~~~~~~
-
-============== ===================
-**index**      13
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-RAY
-~~~~~~~
-
-============== ===================
-**index**      14
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-RECTANGLE
-~~~~~~~~~~~~~
-
-============== ===================
-**index**      15
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-REGULAR-POLYGON
-~~~~~~~~~~~~~~~~~~~
-
-============== ===================
-**index**      16
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-ROUNDED-RECTANGLE
-~~~~~~~~~~~~~~~~~~~~~
-
-============== ===================
-**index**      17
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-RUBBER
-~~~~~~~~~~
-
-============== ===================
-**index**      18
-**arguments**  none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-ADD-SLOT
-~~~~~~~~
-
-index 19
-
-
-
-ADD-TEXT-MULTI
-~~~~~~~~~~~~~~
-
-index 20
-
-
-
-ADD-TEXT-SINGLE
-~~~~~~~~~~~~~~~
-
-index 21
-
-
-
-ADD-TO-SELECTION
-~~~~~~~~~~~~~~~~
-
-index 22
-
-
-ADD-TRIANGLE
-~~~~~~~~~~~~
-
-index 23
-
-
-ADD-VERTICAL-DIMENSION
-~~~~~~~~~~~~~~~~~~~~~~
-
-index 24
-
-
-ALERT
-~~~~~
-
-index 25
-
-
-
-ALLOW-RUBBER
-~~~~~~~~~~~~
-
-index 26
-
-
-APPEND-HISTORY
-~~~~~~~~~~~~~~
-
-index 27
-
-
-
-CALCULATE-ANGLE
-~~~~~~~~~~~~~~~
-
-index 28
-
-
-
-CALCULATE-DISTANCE
-~~~~~~~~~~~~~~~~~~
-
-index 29
-
-
-
-## CHANGELOG
-
-index 30
-
-
-
-## CLEAR-RUBBER
-
-index 31
-
-
-
-## CLEAR-SELECTION
-
-index 32
-
-
-
-## COPY
-
-index 33
-
-
-
-## COPY-SELECTED
-
-index 34
-
-
-
-## CUT
-
-index 35
-
-
-
-## CUT-SELECTED
-
-index 36
-
-
-
-## DAY
-
-index 37
-
-
-
-## DEBUG
-
-index 38
-
-
-
-## DELETE-SELECTED
-
-index 39
-
-
-
-## DESIGN-DETAILS
-
-index 40
-
-
-
-## DO-NOTHING
-
-index 41
-
-
-
-## END
-
-index 42
-
-
-
-## ERROR
-
-index 43
-
-
-
-## HELP
-
-index 44
-
-
-
-## ICON
-
-index 45
-
-Example Call
-
-```
-ICON 32
-```
-
-## INIT
-
-index 46
-
-
-
-## MESSAGEBOX
-
-index 47, 3 char arrays deliminated by quotes Example Call
-
-Example Call
-
-```
-> MESSAGEBOX "alert" "" ""
-```
-
-## MIRROR-SELECTED
-
-index 48
-
-## MOUSE-X
-
-index 49
-
-Example Call
-
-```
-> MOUSE-X
-321
-```
-
-## MOUSE-Y
-
-index 50
-
-```
-> MOUSE-Y
-221
-```
-
-## MOVE-SELECTED
-
-index 51
-
-Example
-
-```
->
-```
-
-## NEW
-
-| index | arguments | flags |
-|------|------|------|
-| 52 | none | |
-
-Create a new EmbPattern with a new tab in the GUI.
-
-## NIGHT
-
-| index | arguments | flags |
-|------|------|------|
-| 53 | none | |
-
-
-
-## NUM-SELECTED
-
-| index | arguments | flags |
-|------|------|------|
-| 54 | none | |
-
-```
-> NUM-SELECTED
-12
-```
-
-## OPEN
-
-| index | arguments | flags |
-|------|------|------|
-| 54 | string | |
-
-Open an EmbPattern with the supplied filename in argument 0.
-
-```
-> OPEN designs/flower.pes
-12
-```
-
 ## PAN
 
 index 56
@@ -1192,28 +797,6 @@ Adds a star to the vector layer at the mouse co-ords.
 
 index 159
 
-
-
-## SCALE
-
-| index | arguments | flags |
-|------|------|------|
-| 160 | selected objects, real number | |
-
-Scale all selected objects by the number supplied, without selection scales the
-entire design.
-
-## SINGLE-LINE-TEXT
-
-index 161
-
-
-
-## SYSWINDOWS
-
-index 162
-
-
 ## TRIM
 
 index 163
@@ -1229,32 +812,9 @@ A selected line in the vector layer. Otherwise 2 mouse co-ords in sequence.
 Seperates stitch blocks by cutting threads between those either side of a line
 supplied by the user then rerouting the stitches.
 
-## TIME
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-index 165
-
-Prints the current time as ISO formatted UTC to the console.
-
-## ZOOMFACTOR
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-index 166 argument real number
-
-Sets the zoom factor to the supplied argument.
-
-## PRODUCT
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-index 167
-
-Prints the name and build code of the running version of Embroidermodder to
-disambiguate between forks and build versions. The string may only start with
-`embroidermodder` if the build is from the official Embroidermodder project
-under the terms of the license.
 
 ## OFFSET
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 | index | arguments | flags |
 |------|------|------|
@@ -1360,266 +920,81 @@ FIXME: Not sure what this one means.
 
 [TOC]
 
-## ADD-GEOMETRY
-~~~~~~~~~~~~~~~
-
-============== ===================
-**index**     | 5
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-## ADD-HORIZONTAL-DIMENSION
-~~~~~~~~~~~~~~~
-
-============== ===================
-**index**     | 6
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-
-## ADD-IMAGE
-~~~~~~~~~~~~~~~
-
-============== ===================
-**index**     | 7
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-## ADD-INFINITE-LINE
-~~~~~~~~~~~~~~~
-
-============== ===================
-**index**     | 8
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-
-## ADD-LINE
-~~~~~~~~~~~~~~~
-
-============== ===================
-**index**     | 9
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-## ADD-PATH
-~~~~~~~~~~~~~~~
-
-============== ===================
-**index**     | 10
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-\subsection{ADD-POINT}
-~~~~~~~~~~~~~~~
-
-============== ===================
-**index**     | 11
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-\subsection{ADD-POLYGON}
-
-============== ===================
-**index**     | 12
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-
-\subsection{ADD-POLYLINE}
-
-============== ===================
-**index**     | 13
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-
-## ADD-RAY
-
-============== ===================
-**index**     | 14
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-
-## ADD-RECTANGLE
-
-============== ===================
-**index**     | 15
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-
-## ADD-REGULAR-POLYGON
-
-============== ===================
-**index**     | 16
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-
-## ADD-ROUNDED-RECTANGLE
-
-============== ===================
-**index**     | 17
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-## ADD-RUBBER
-
-============== ===================
-**index**     | 18
-**arguments** | none
-**tooltip**
-**statustip**
-**alias**
-**shortcut**
-============== ===================
-
-
-## ADD-SLOT
-
-index 19
-
-
-
-## ADD-TEXT-MULTI
-
-index 20
-
-
-
-## ADD-TEXT-SINGLE
-
-index 21
-
-
-
-## ADD-TO-SELECTION
+ADD-TO-SELECTION
+----------------
 
 index 22
 
 
+ADD-TRIANGLE
+------------
 
-## ADD-TRIANGLE
 
 index 23
 
 
-
-## ADD-VERTICAL-DIMENSION
+ADD-VERTICAL-DIMENSION
+----------------------
 
 index 24
 
 
-
-## ALERT
+ALERT
+-----
 
 index 25
 
 
-
-## ALLOW-RUBBER
+ALLOW-RUBBER
+------------
 
 index 26
 
 
-
-## APPEND-HISTORY
+APPEND-HISTORY
+--------------
 
 index 27
 
 
-
-## CALCULATE-ANGLE
+CALCULATE-ANGLE
+---------------
 
 index 28
 
 
-
-## CALCULATE-DISTANCE
+CALCULATE-DISTANCE
+------------------
 
 index 29
 
 
-
-## CHANGELOG
+CHANGELOG
+---------
 
 index 30
 
 
-
-## CLEAR-RUBBER
+CLEAR-RUBBER
+------------
 
 index 31
 
 
-
-## CLEAR-SELECTION
+CLEAR-SELECTION
+---------------
 
 index 32
 
 
-
-## COPY
+COPY
+----
 
 index 33
 
 
-
-## COPY-SELECTED
+COPY-SELECTED
+-------------
 
 index 34
 
@@ -1701,15 +1076,6 @@ index 46
 
 
 
-## MESSAGEBOX
-
-index 47, 3 char arrays deliminated by quotes Example Call
-
-Example Call
-
-```
-> MESSAGEBOX "alert" "" ""
-```
 
 ## MIRROR-SELECTED
 
@@ -1745,7 +1111,8 @@ Example
 >
 ```
 
-## NEW
+NEW
+---
 
 | index | arguments | flags |
 |------|------|------|
@@ -1753,15 +1120,15 @@ Example
 
 Create a new EmbPattern with a new tab in the GUI.
 
-## NIGHT
+NIGHT
+-----
 
 | index | arguments | flags |
 |------|------|------|
 | 53 | none | |
 
-
-
-## NUM-SELECTED
+NUM-SELECTED
+------------
 
 | index | arguments | flags |
 |------|------|------|
@@ -1772,7 +1139,8 @@ Create a new EmbPattern with a new tab in the GUI.
 12
 ```
 
-## OPEN
+OPEN
+----
 
 | index | arguments | flags |
 |------|------|------|
@@ -1785,37 +1153,41 @@ Open an EmbPattern with the supplied filename in argument 0.
 12
 ```
 
-## PAN
+PAN
+---
 
 index 56
 
 
-
-## PASTE
+PASTE
+-----
 
 index 57
 
 
 
-## PASTE-SELECTED
+PASTE-SELECTED
+--------------
 
 index 58
 
 
-
-## PERPENDICULAR-DISTANCE
+PERPENDICULAR-DISTANCE
+----------------------
 
 index 59
 
 
 
-## PLATFORM
+PLATFORM
+--------
 
 index 60
 
 
 
-## PREVIEW-OFF
+PREVIEW-OFF
+-----------
 
 index 61
 
@@ -2477,13 +1849,15 @@ under the terms of the license.
 
 Shifts the selected objects by the amount given by the mouse co-ordinates.
 
-## FIND
+FIND
+----
 
 index 169 argument int
 
 Select the stitch at the index given and center the view on it.
 
-## RECORD
+RECORD
+------
 
 index 170
 
@@ -2491,61 +1865,75 @@ Start recording all user input that passes through the actuator (i.e. actions
 from this table, with all the data passed as arguments) for forming macros. Stop
 recording if RECORD/PLAYBACK/END is issued.
 
-## BREAK_AT_POINT
+BREAK_AT_POINT
+--------------
 
 index 171
 
-## BREAK_2_POINTS
+BREAK_2_POINTS
+--------------
 
 index 172
 
-## UNITS
+UNITS
+-----
 
 index 173
 
-## DIVIDE
+DIVIDE
+------
 
 index 174
 
-## GRID
+GRID
+----
 
 index 175
 
-## GRIPHOT
+GRIPHOT
+-------
 
 index 176
 
-## GRIPCOLOR
+GRIPCOLOR
+---------
 
 index 177
 
-## GRIPCOOL
+GRIPCOOL
+--------
 
 index 178
 
-## GRIPSIZE
+GRIPSIZE
+--------
 
 index 179
 
-## AREA
+AREA
+----
 
 index 180
 
 | 15 | `AREA` | Selected objects |
 
-## CHAMFER
+CHAMFER
+-------
 
 index 181
 
-## PICK-ADD
+PICK-ADD
+--------
 
 index 182
 
-## FILLET
+FILLET
+------
 
 index 182
 
-## EXTEND
+EXTEND
+------
 
 index 183
 
@@ -2573,66 +1961,6 @@ index 188
 FIXME: Not sure what this one means.
 
 \chapter{CAD Command Overview}
-
-\section{ABOUT}
-\index{action}
-
-\begin{center}
-\begin{tabular}{l | l | l}
-index & arguments & flags \\
-0 & none &
-\end{tabular}
-\end{center}
-
-\section{ADD-ARC}
-\index{action}
-
-\begin{center}
-\begin{tabular}{l | l | l}
-index & arguments & flags \\
-1 & mouse co-ords &
-\end{tabular}
-\end{center}
-
-\section{ADD-CIRCLE}
-\index{ADD-CIRCLE}
-
-\begin{center}
-\begin{tabular}{l | l | l}
-index & arguments & flags \\
-2 & mouse co-ords &
-\end{tabular}
-\end{center}
-
-\section{ADD-DIM-LEADER}
-\index{ADD-DIM-LEADER}
-
-\begin{center}
-\begin{tabular}{l | l | l}
-index & arguments & flags \\
-3 & none &
-\end{tabular}
-\end{center}
-
-\section{ADD-ELLIPSE}
-\index{ADD-ELLIPSE}
-
-\begin{center}
-\begin{tabular}{l | l | l}
-index & arguments & flags \\
-4 & none &
-\end{tabular}
-\end{center}
-
-\section{ADD-GEOMETRY}
-\index{ADD-GEOMETRY}
-
-\begin{center}
-\begin{tabular}{l | l | l}
-index & arguments & flags \\
-5 & none &
-\end{tabular}
-\end{center}
 
 \section{ADD-HORIZONTAL-DIMENSION}
 \index{ADD-HORIZONTAL-DIMENSION}
@@ -3329,15 +2657,6 @@ index 139
 
 index 140
 
-\section{SHOW-ALL-LAYERS}
-\index{action}
-
-index 141
-
-\section{FREEZE-ALL-LAYERS}
-\index{action}
-
-index 142
 
 \section{THAW-ALL-LAYERS}
 \index{action}
@@ -3393,50 +2712,5 @@ index 152
 \index{QUICKLEADER}
 
 index 153
-
-\section{RGB}
-\index{RGB}
-
- index 154
-
-\section{ROTATE}
-\index{ROTATE}
-
-index 155
-
-\section{SANDBOX}
-\index{SANDBOX}
-
-index 156
-
-\section{ADD-SNOWFLAKE}
-\index{ADD-SNOWFLAKE}
-
-index 157
-
-\section{ADD-STAR}
-\index{ADD-STAR}
-
-index 158
-
-\section{DELETE}
-\index{DELETE}
-
-index 159
-
-\section{SCALE}
-\index{SCALE}
-
-index 160
-
-\section{SINGLE-LINE-TEXT}
-\index{SINGLE-LINE-TEXT}
-
-index 161
-
-\section{SYSWINDOWS}
-\index{SYSWINDOWS}
-
-index 162
 
 
