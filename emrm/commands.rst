@@ -44,6 +44,39 @@ CAD command review
    commands/023-add-triangle.rst
    commands/024-add-vertical-dimension.rst
    commands/025-alert.rst
+   commands/027-append-history.rst
+   commands/028-calculate-angle.rst
+   commands/029-calculate-distance.rst
+   commands/030-changelog.rst
+   commands/031-clear-rubber.rst
+   commands/032-clear-selection.rst
+   commands/033-copy.rst
+   commands/034-copy-selected.rst
+   commands/035-cut.rst
+   commands/036-cut-selected.rst
+   commands/037-day.rst
+   commands/038-debug.rst
+   commands/039-delete-selected.rst
+   commands/040-design-details.rst
+   commands/041-do-nothing.rst
+   commands/042-end-command.rst
+   commands/043-error.rst
+   commands/044-help.rst
+   commands/045-icon.rst
+   commands/046-init-command.rst
+   commands/047-messagebox.rst
+   commands/048-mirror-selected.rst
+   commands/049-mouse-x.rst
+   commands/050-mouse-y.rst
+   commands/051-move-selected.rst
+   commands/051-num-selected.rst
+   commands/052-new.rst
+   commands/053-night.rst
+   commands/054-open.rst
+   commands/154-rgb.rst
+   commands/165-time.rst
+   commands/166-zoomfactor.rst
+   commands/167-product.rst
    commands/141-show-all-layers.rst
    commands/142-freeze-all-layers.rst
    commands/155-rotate.rst

@@ -1,5 +1,7 @@
+move-selected
+=============
 
-## MOVE-SELECTED
+.. index:: move-selected
 
 index 51
 

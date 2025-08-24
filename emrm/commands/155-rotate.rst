@@ -1,6 +1,7 @@
+rotate
+======
 
-\section{ROTATE}
-\index{ROTATE}
+.. index:: ROTATE
 
 index 155
 

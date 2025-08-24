@@ -1,4 +1,6 @@
+changelog
+=========
 
-## CHANGELOG
+.. index:: changelog
 
 index 30

@@ -10,7 +10,7 @@ curdir = os.getcwd()
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Embroidermodder'
-copyright = '2025, The Embroidermodder Team'
+copyright = '2011-2025, The Embroidermodder Team'
 author = 'The Embroidermodder Team'
 release = '2.0.0-alpha'
 description = "A suite of free and open source software for machine embroidery."
@@ -39,6 +39,8 @@ exclude_patterns = [
     'libembroidery/*.md',
     'embroiderymobile/*.md'
 ]
+
+html_title = "Embroidermodder " + release
 
 # Doxygen generation
 breathe_default_project = "embroidermodder"

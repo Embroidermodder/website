@@ -1,5 +1,6 @@
+sandbox
+=======
 
-\section{SANDBOX}
-\index{SANDBOX}
+.. index:: sandbox
 
 index 156

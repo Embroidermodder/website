@@ -1,5 +1,6 @@
+show-all-layers
+===============
 
-\section{SHOW-ALL-LAYERS}
-\index{action}
+.. index:: show-all-layers
 
 index 141

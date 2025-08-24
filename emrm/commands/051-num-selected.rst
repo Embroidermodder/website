@@ -1,4 +1,5 @@
-## NUM-SELECTED
+num-selected
+============
 
 .. index:: num-selected
 
