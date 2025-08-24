@@ -22,6 +22,11 @@ join us on GitHub. This document is written as developer training as well
 helping new users (see the last sections) so this is the place to learn how
 to start changing the code.
 
+.. toctree::
+   introduction/features.rst
+   introduction/history.rst
+   introduction/credits.rst
+
 
 The Embroidermodder Project and Team
 ------------------------------------

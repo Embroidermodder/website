@@ -5,6 +5,8 @@ Documentation
 ~~~~~~~~~~~~~
 
 #. PDF, A4 and US letter format output option
+#. The ability to add pages such as the copyright page and dedication page which
+  only appear in the print version.
 
 Embroidermodder
 ~~~~~~~~~~~~~~~

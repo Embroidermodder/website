@@ -43,7 +43,7 @@ exclude_patterns = [
 # Doxygen generation
 breathe_default_project = "embroidermodder"
 breathe_projects = {
-    "embroidermodder": curdir + "/embroidermodder/docs/xml"
+    "embroidermodder": curdir + "/xml"
 }
 
 # -- Options for HTML output -------------------------------------------------
@@ -59,3 +59,14 @@ html_theme_options = {
     "source_branch": "main",
     "source_directory": "emrm/"
 }
+
+# -- Options for LaTeX output ------------------------------------------------
+
+latex_additional_files = ['emrm.sty']
+latex_elements = {
+    'preamble': r'''
+\usepackage{emrm}
+'''
+}
+latex_show_urls = 'footnote'
+
