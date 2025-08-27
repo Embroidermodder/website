@@ -1,12 +1,14 @@
-add-ellipse
------------
+``add-ellipse`` command
+=======================
 
-.. index:: add-ellipse
+.. index:: ``add-ellipse``
 
-========= ============
-index     4
-arguments none
-flags     
-========= ============
++---------------+------------------------------+
+| index         | 4                            |
++---------------+------------------------------+
+| arguments     | none                         |
++---------------+------------------------------+
+| flags         |                              |
++---------------+------------------------------+
 
-
+Add an ellipse object to the current vector layer.
