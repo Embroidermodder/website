@@ -12,11 +12,12 @@ the prompt similar to a `GCODE` file.
 These are available on all platorms but with various levels of support and
 applicability.
 
-CAD command review
-------------------
+For a table of all the commands, see the appendix (TODO).
+
+.. populate with ``echo commands/* | sed "s/ /\n   /g"``
 
 .. toctree::
-   :caption: Commands
+   :caption: Command List
 
    commands/000-about.rst
    commands/001-add-arc.rst
@@ -44,6 +45,7 @@ CAD command review
    commands/023-add-triangle.rst
    commands/024-add-vertical-dimension.rst
    commands/025-alert.rst
+   commands/026-allow-rubber.rst
    commands/027-append-history.rst
    commands/028-calculate-angle.rst
    commands/029-calculate-distance.rst
@@ -73,12 +75,28 @@ CAD command review
    commands/052-new.rst
    commands/053-night.rst
    commands/054-open.rst
-   commands/154-rgb.rst
-   commands/165-time.rst
-   commands/166-zoomfactor.rst
-   commands/167-product.rst
+   commands/056-pan.rst
+   commands/057-paste.rst
+   commands/058-paste-selected.rst
+   commands/135-zoom-center.rst
+   commands/136-hide-all-layers.rst
+   commands/137-zoom-selected.rst
+   commands/138-zoom-all.rst
+   commands/139-design.rst
+   commands/140-add-single-text.rst
    commands/141-show-all-layers.rst
    commands/142-freeze-all-layers.rst
+   commands/143-thaw-all-layers.rst
+   commands/144-lock-all-layers.rst
+   commands/145-unlock-all-layers.rst
+   commands/147-add-distance.rst
+   commands/148-locate-point.rst
+   commands/149-quickselect.rst
+   commands/150-spellcheck.rst
+   commands/151-distance.rst
+   commands/152-move.rst
+   commands/153-quickleader.rst
+   commands/154-rgb.rst
    commands/155-rotate.rst
    commands/156-sandbox.rst
    commands/157-add-snowflake.rst
@@ -87,470 +105,176 @@ CAD command review
    commands/160-scale.rst
    commands/161-single-line-text.rst
    commands/162-syswindows.rst
-
-%cad_desc.csv
-
-.. index:: CAD; command; action; action_table
-
-A CAD command in Embroidermodder is referred to as
-an **action** and the data needed for it to function is stored
-in the ``action_table``. For a regular user who wishes to use
-more shortcuts and macros
-
-	\label{tab:command-table}
-
-.. csv-table:: Overview of the CAD commands available on all platorms but with various levels of support and applicability.
-   :header: "ID", "Name", "Arguments", "Description"
-   :widths: 5, 10, 20, 50
-
-   0,"NEW","none","Create a new EmbPattern with a new tab in the GUI."
-   1,"OPEN","char array","Open an EmbPattern with the supplied filename ``fname``."
-   2,"SAVE","char array","Save the current loaded EmbPattern to the supplied filename ``fname``."
-   3,"SCALE","selected objects, 1 float","Scale all selected objects by the number supplied, without selection scales the entire design."
-   4,"CIRCLE","mouse co-ords","Adds a circle to the design based on the supplied numbers, converts to stitches on save for stitch only formats."
-   5,"OFFSET","mouse co-ords","Shifts the selected objects by the amount given by the mouse co-ordinates."
-   6,"EXTEND","",""
-   7,"TRIM","selected stitches","Sets the flag for the stitches selected to TRIM."
-   8,"break_at_point","",""
-   9,"break_2_points","",""
-   10,"FILLET","",""
-   11,"STAR","mouse co-ords","Adds a star to the vector layer at the mouse co-ords."
-   12,"textsingle","",""
-   13,"CHAMFER","",""
-   14,"SPLIT","A selected line in the vector layer. Otherwise 2 mouse co-ords in sequence.","Seperates stitch blocks by cutting threads between those either side of a line supplied by the user then rerouting the stitches."
-   15,"AREA","Selected objects",""
-   16,"TIME","None","Prints the current time as ISO formatted UTC to the console."
-   17,"PICKADD","None",""
-   16,"ZOOMFACTOR","float","Sets the zoom factor to the supplied argument."
-   17,"PRODUCT","None "Prints the name and build code of the running version of Embroidermodder to disambiguate between forks and build versions. The string may only start with ``embroidermodder`` if the build is from the official Embroidermodder project under the terms of the license."
-   18,"PROGRAM/PROG","",""
-   19,"ZOOMWINDOW","",""
-   20,"DIVIDE","",""
-   21,"FIND","int","Select the stitch at the index given and center the view on it."
-   22,"RECORD","None","Start recording all user input that passes through the actuator (i.e. actions from this table, with all the data passed as arguments) for forming macros. Stop recording if RECORD/PLAYBACK/END is issued."
-   23,"PLAYBACK","None",""
-   24,"ROTATE","",""
-   25,"RGB","",""
-   26,"move","",""
-   27,"grid","",""
-   28,"griphot","",""
-   29,"gripcolor","",""
-   30,"gripcool","",""
-   31,"gripsize","",""
-   32,"highlight","",""
-   33,"units","",""
-   34,"locatepoint","",""
-   35,"distance","",""
-   36,"ARC","",""
-   37,"ELLIPSE","",""
-   38,"ARRAY","",""
-   39,"POINT","",""
-   40,"POLYLINE","",""
-   41,"POLYGON","",""
-   42,"rectangle","",""
-   43,"line","",""
-   44,"arc-rt","",""
-   45,"dolphin","",""
-   46,"heart","",""
-
-0 & newfile & none & Create a new EmbPattern with a new tab in the GUI. \\
-1 & openfile & filename string & Open an EmbPattern with the supplied filename `fname`. \\
-2 & savefile & filename string & Save the current loaded EmbPattern to the supplied filname `fname`. \\
-3 & scale & selected objects, 1 float & Scale all selected objects by the number supplied, without selection scales the entire design \\
-4 & circle & mouse co-ords & Adds a circle to the design based on the supplied numbers, converts to stitches on save for stitch only formats. \\
-5 & offset & mouse co-ords & Shifts the selected objects by the amount given by the mouse co-ordinates. \\
-6 & extend & & \\
-7 & trim & & \\
-8 & ``break\_at\_point`` & & \\
-9 & ``break\_2\_points`` & & \\
-10 & fillet & & \\
-11 & star & & \\
-12 & singlelinetext & & \\
-13 & chamfer & & \\
-14 & split & & \\
-15 & area & & \\
-16 & time & & \\
-17 & pickadd & & \\
-16 & zoomfactor & & \\
-17 & product & & \\
-18 & program & & \\
-19 & zoomwindow & & \\
-20 & divide & & \\
-21 & find & & \\
-22 & record & & \\
-23 & playback & & \\
-24 & rotate & & \\
-25 & rgb & & \\
-26 & move & & \\
-27 & grid & & \\
-28 & griphot & & \\
-29 & gripcolor & & \\
-30 & gripcool & & \\
-31 & gripsize & & \\
-32 & highlight & & \\
-33 & units & & \\
-34 & locatepoint & & \\
-35 & distance & & \\
-36 & arc & & \\
-37 & ellipse & & \\
-38 & array & & \\
-39 & point & & \\
-40 & polyline & & \\
-41 & polygon & & \\
-42 & rectangle & & \\
-43 & line & & \\
-44 & arc (rt) & & \\
-45 & dolphin & & \\
-46 & heart |
-\end{tabular}
-
-## PAN
-
-index 56
-
-
-
-## PASTE
-
-index 57
-
-
-
-## PASTE-SELECTED
-
-index 58
-
-
-
-## PERPENDICULAR-DISTANCE
-
-index 59
-
-
-
-## PLATFORM
-
-index 60
-
-
-
-## PREVIEW-OFF
-
-index 61
-
-
-
-## PREVIEW-ON
-
-index 62
-
-
-
-## PRINT
-
-index 63
-
-
-
-## PRINT-AREA
-
-index 64
-
-
-
-## QSNAP-X
-
-index 65
-
-
-
-## QSNAP-Y
-
-index 66
-
-
+   commands/163-trim.rst
+   commands/164-split.rst
+   commands/165-time.rst
+   commands/166-set.rst
+   commands/167-product.rst
+   commands/168-offset.rst
+   commands/169-find.rst
+   commands/170-record.rst
+   commands/188-arc-rt.rst
 
 ## EXIT
 
  index 67
 
-
-
 ## REDO
 
 index 68
-
-
 
 ## ROTATE-SELECTED
 
 index 69
 
-
-
 ## RUBBER
 
 index 70
-
-
 
 ## SCALE-SELECTED
 
 index 71
 
-
-
 ## SELECT-ALL
 
 index 72
-
-
 
 ## SETTINGS-DIALOG
 
 index 73
 
-
-
 ## SET-BACKGROUND-COLOR
 
 index 74
-
-
 
 ## SET-CROSSHAIR-COLOR
 
 index 75
 
-
-
 ## SET-CURSOR-SHAPE
 
 index 76
-
-
 
 ## SET-GRID-COLOR
 
 index 77
 
-
-
 ## SET-PROMPT-PREFIX
 
 index 78
-
-
 
 ## SET-RUBBER-FILTER
 
 index 79
 
-
-
 ## SET-RUBBER-MODE
 
 index 80
-
-
 
 ## SET-RUBBER-POINT
 
 index 81
 
-
-
 ## SET-RUBBER-TEXT
 
 index 82
-
-
 
 ## SPARE-RUBBER
 
 index 83
 
-
-
 ## TIP-OF-THE-DAY
 
 index 84
-
-
 
 ## TODO
 
  index 85
 
-
-
 ## UNDO
 
  index 86
-
-
 
 ## VERSION
 
 index 87
 
-
-
 ## VULCANIZE
 
 index 88
-
-
 
 ## WHATS-THIS
 
 index 89
 
-
-
 ## WINDOW-CLOSE
 
 index 90
-
-
 
 ## WINDOW-CLOSE-ALL
 
 index 91
 
-
-
 ## WINDOW-TILE
 
 index 92
-
-
 
 ## WINDOW-CASCADE
 
 index 93
 
-
-
 ## WINDOW-NEXT
 
 index 94
-
-
 
 ## WINDOW-PREVIOUS
 
 index 95
 
 
-
-## ZOOM
-
- index 96
-
-
-
-## ZOOM-IN
-
-index 97
-
-
-
-## TEST
-
- index 98
-
-
-
-## SLEEP
-
-index 99
-
-
-
-## LAYER-EDITOR
-
-index 100
-
-
-
-## MAKE-LAYER-CURRENT
-
-index 101
-
-
-
-## TEXT-BOLD
-
-index 102
-
-
-
 ## TEXT-ITALIC
 
 index 103
-
-
 
 ## TEXT-UNDERLINE
 
 index 104
 
-
-
 ## TEXT-STRIKEOUT
 
 index 105
-
-
 
 ## TEXT-OVERLINE
 
 index 106
 
-
-
 ## LAYER-PREVIOUS
 
 index 107
-
-
 
 ## ICON16
 
 index 108
 
-
-
 ## ICON24
 
 index 109
-
-
 
 ## ICON32
 
 index 110
 
-
-
 ## ICON48
 
 index 111
-
-
 
 ## ICON64
 
 index 112
 
-
-
 ## ICON128
 
 index 113
-
-
 
 ## SAVE
 
@@ -572,302 +296,171 @@ Save the current loaded EmbPattern to the supplied filename in argument 0.
 
 index 116
 
-
-
 ## PAN-POINT
 
 index 117
-
-
 
 ## PAN-LEFT
 
 index 118
 
-
-
 ## PAN-RIGHT
 
 index 119
-
-
 
 ## PAN-UP
 
 index 120
 
-
-
 ## PAN-DOWN
 
 index 121
-
-
 
 ## ZOOM-REAL-TIME
 
 index 122
 
-
-
 ## ZOOM-PREVIOUS
 
 index 123
-
-
 
 ## ZOOM-WINDOW
 
 index 124
 
-
-
 ## ZOOM-DYNAMIC
 
 index 125
-
-
 
 ## ZOOM-OUT
 
 index 126
 
-
-
 ## ZOOM-EXTENTS
 
 index 127
-
-
 
 ## LAYERS
 
 index 128
 
-
-
-## LAYER-SELECTOR
+\section{LAYER-SELECTOR}
+\index{action}
 
 index 129
 
-
-
-## TREBLECLEF
+\section{TREBLECLEF}
+\index{action}
 
 index 130
 
-
-
-## COLOR-SELECTOR
+\section{COLOR-SELECTOR}
+\index{action}
 
 index 131
 
-
-
-## LINE-TYPE-SELECTOR
+\section{LINE-TYPE-SELECTOR}
+\index{action}
 
 index 132
 
-
-
-## LINE-WEIGHT-SELECTOR
+\section{LINE-WEIGHT-SELECTOR}
+\index{action}
 
 index 133
 
-
-
-## ZOOM-SCALE
+\section{ZOOM-SCALE}
+\index{action}
 
 index 134
-
-
 
 ## ZOOM-CENTER
 
 index 135
 
-
-
 ## HIDE-ALL-LAYERS
 
 index 136
-
-
 
 ## ZOOM-SELECTED
 
 index 137
 
-
-
 ## ZOOM-ALL
 
 index 138
-
-
 
 ## ADD-HEART
 
 index 139
 
-
-
 ## ADD-SINGLE-LINE-TEXT
 
 index 140
-
-
 
 ## SHOW-ALL-LAYERS
 
 index 141
 
-
-
 ## FREEZE-ALL-LAYERS
 
 index 142
-
-
 
 ## THAW-ALL-LAYERS
 
 index 143
 
-
-
 ## LOCK-ALL-LAYERS
 
 index 144
-
-
 
 ## UNLOCK-ALL-LAYERS
 
 index 145
 
-
-
 ## ADD-DOLPHIN
 
 index 146
-
-
 
 ## ADD-DISTANCE
 
 index 147
 
-
-
 ## LOCATE-POINT
 
 index 148
-
-
 
 ## QUICKSELECT
 
 index 149
 
-
-
 ## SPELLCHECK
 
 index 150
-
-
 
 ## DISTANCE
 
 index 151
 
-
-
 ## MOVE
 
 index 152
-
-
 
 ## QUICKLEADER
 
 index 153
 
-
-
 ## RGB
 
  index 154
-
-
 
 ## ROTATE
 
 index 155
 
-
-
 ## SANDBOX
 
 index 156
-
-
-
-## ADD-SNOWFLAKE
-
-index 157
-
-
-
-## ADD-STAR
-
-| 158 | `STAR` | mouse co-ords |
-
-Adds a star to the vector layer at the mouse co-ords.
-
-## DELETE
-
-index 159
-
-## TRIM
-
-index 163
-selected stitches
-
-Sets the flag for the stitches selected to `TRIM`.
-
-## SPLIT
-
-index 164
-A selected line in the vector layer. Otherwise 2 mouse co-ords in sequence.
-
-Seperates stitch blocks by cutting threads between those either side of a line
-supplied by the user then rerouting the stitches.
-
-
-## OFFSET
-------------------------
-
-| index | arguments | flags |
-|------|------|------|
-| 168 | mouse co-ords | |
-
-Shifts the selected objects by the amount given by the mouse co-ordinates.
-
-## FIND
-
-index 169 argument int
-
-Select the stitch at the index given and center the view on it.
-
-## RECORD
-
-index 170
-
-Start recording all user input that passes through the actuator (i.e. actions
-from this table, with all the data passed as arguments) for forming macros. Stop
-recording if RECORD/PLAYBACK/END is issued.
 
 ## BREAK_AT_POINT
 
@@ -951,8 +544,6 @@ index 188
 
 FIXME: Not sure what this one means.
 
-[TOC]
-
 ADD-TO-SELECTION
 ----------------
 
@@ -962,45 +553,37 @@ index 22
 ADD-TRIANGLE
 ------------
 
-
 index 23
-
 
 ADD-VERTICAL-DIMENSION
 ----------------------
 
 index 24
 
-
 ALERT
 -----
 
 index 25
-
 
 ALLOW-RUBBER
 ------------
 
 index 26
 
-
 APPEND-HISTORY
 --------------
 
 index 27
-
 
 CALCULATE-ANGLE
 ---------------
 
 index 28
 
-
 CALCULATE-DISTANCE
 ------------------
 
 index 29
-
 
 CHANGELOG
 ---------
@@ -1031,67 +614,45 @@ COPY-SELECTED
 
 index 34
 
-
-
 ## CUT
 
 index 35
-
-
 
 ## CUT-SELECTED
 
 index 36
 
-
-
 ## DAY
 
 index 37
-
-
 
 ## DEBUG
 
 index 38
 
-
-
 ## DELETE-SELECTED
 
 index 39
-
-
 
 ## DESIGN-DETAILS
 
 index 40
 
-
-
 ## DO-NOTHING
 
 index 41
-
-
 
 ## END
 
 index 42
 
-
-
 ## ERROR
 
 index 43
 
-
-
 ## HELP
 
 index 44
-
-
 
 ## ICON
 
@@ -1106,8 +667,6 @@ ICON 32
 ## INIT
 
 index 46
-
-
 
 
 ## MIRROR-SELECTED
@@ -1199,344 +758,206 @@ index 57
 
 
 
-PASTE-SELECTED
---------------
+``print`` command
+=================
 
-index 58
-
-
-PERPENDICULAR-DISTANCE
-----------------------
-
-index 59
-
-
-
-PLATFORM
---------
-
-index 60
-
-
-
-PREVIEW-OFF
------------
-
-index 61
-
-
-
-## PREVIEW-ON
-
-index 62
-
-
-
-## PRINT
+\index{PRINT}
 
 index 63
 
+``print-area`` command
+======================
 
-
-## PRINT-AREA
+\index{PRINT-AREA}
 
 index 64
-
-
-
-## QSNAP-X
-
-index 65
-
-
-
-## QSNAP-Y
-
-index 66
-
 
 
 ## EXIT
 
  index 67
 
-
-
 ## REDO
 
 index 68
-
-
 
 ## ROTATE-SELECTED
 
 index 69
 
-
-
 ## RUBBER
 
 index 70
-
-
 
 ## SCALE-SELECTED
 
 index 71
 
-
-
 ## SELECT-ALL
 
 index 72
-
-
 
 ## SETTINGS-DIALOG
 
 index 73
 
-
-
 ## SET-BACKGROUND-COLOR
 
 index 74
-
-
 
 ## SET-CROSSHAIR-COLOR
 
 index 75
 
-
-
 ## SET-CURSOR-SHAPE
 
 index 76
-
-
 
 ## SET-GRID-COLOR
 
 index 77
 
-
-
 ## SET-PROMPT-PREFIX
 
 index 78
-
-
 
 ## SET-RUBBER-FILTER
 
 index 79
 
-
-
 ## SET-RUBBER-MODE
 
 index 80
-
-
 
 ## SET-RUBBER-POINT
 
 index 81
 
-
-
 ## SET-RUBBER-TEXT
 
 index 82
-
-
 
 ## SPARE-RUBBER
 
 index 83
 
-
-
 ## TIP-OF-THE-DAY
 
 index 84
-
-
 
 ## TODO
 
  index 85
 
-
-
 ## UNDO
 
  index 86
-
-
 
 ## VERSION
 
 index 87
 
-
-
 ## VULCANIZE
 
 index 88
-
-
 
 ## WHATS-THIS
 
 index 89
 
-
-
 ## WINDOW-CLOSE
 
 index 90
-
-
 
 ## WINDOW-CLOSE-ALL
 
 index 91
 
-
-
 ## WINDOW-TILE
 
 index 92
-
-
 
 ## WINDOW-CASCADE
 
 index 93
 
-
-
 ## WINDOW-NEXT
 
 index 94
-
-
 
 ## WINDOW-PREVIOUS
 
 index 95
 
-
-
-## ZOOM
+``zoom`` command
+================
 
  index 96
 
+``layer-editor`` command
+========================
 
-
-## ZOOM-IN
-
-index 97
-
-
-
-## TEST
-
- index 98
-
-
-
-## SLEEP
-
-index 99
-
-
-
-## LAYER-EDITOR
+\index{action}
 
 index 100
 
+``make-layer-current`` command
+==============================
 
-
-## MAKE-LAYER-CURRENT
+\index{action}
 
 index 101
 
+``text-bold`` command
+=====================
 
-
-## TEXT-BOLD
+\index{action}
 
 index 102
-
-
 
 ## TEXT-ITALIC
 
 index 103
 
-
-
 ## TEXT-UNDERLINE
 
 index 104
-
-
 
 ## TEXT-STRIKEOUT
 
 index 105
 
-
-
 ## TEXT-OVERLINE
 
 index 106
-
-
 
 ## LAYER-PREVIOUS
 
 index 107
 
-
-
 ## ICON16
 
 index 108
-
-
 
 ## ICON24
 
 index 109
 
-
-
 ## ICON32
 
 index 110
-
-
 
 ## ICON48
 
 index 111
 
-
-
 ## ICON64
 
 index 112
 
-
-
 ## ICON128
 
 index 113
-
-
 
 ## SAVE
 
@@ -1558,253 +979,169 @@ Save the current loaded EmbPattern to the supplied filename in argument 0.
 
 index 116
 
-
-
 ## PAN-POINT
 
 index 117
-
-
 
 ## PAN-LEFT
 
 index 118
 
-
-
 ## PAN-RIGHT
 
 index 119
-
-
 
 ## PAN-UP
 
 index 120
 
-
-
 ## PAN-DOWN
 
 index 121
-
-
 
 ## ZOOM-REAL-TIME
 
 index 122
 
-
-
 ## ZOOM-PREVIOUS
 
 index 123
-
-
 
 ## ZOOM-WINDOW
 
 index 124
 
-
-
 ## ZOOM-DYNAMIC
 
 index 125
-
-
 
 ## ZOOM-OUT
 
 index 126
 
-
-
 ## ZOOM-EXTENTS
 
 index 127
-
-
 
 ## LAYERS
 
 index 128
 
-
-
 ## LAYER-SELECTOR
 
 index 129
-
-
 
 ## TREBLECLEF
 
 index 130
 
-
-
 ## COLOR-SELECTOR
 
 index 131
-
-
 
 ## LINE-TYPE-SELECTOR
 
 index 132
 
-
-
 ## LINE-WEIGHT-SELECTOR
 
 index 133
-
-
 
 ## ZOOM-SCALE
 
 index 134
 
-
-
 ## ZOOM-CENTER
 
 index 135
-
-
 
 ## HIDE-ALL-LAYERS
 
 index 136
 
-
-
 ## ZOOM-SELECTED
 
 index 137
-
-
 
 ## ZOOM-ALL
 
 index 138
 
-
-
 ## ADD-HEART
 
 index 139
-
-
 
 ## ADD-SINGLE-LINE-TEXT
 
 index 140
 
-
-
 ## SHOW-ALL-LAYERS
 
 index 141
-
-
 
 ## FREEZE-ALL-LAYERS
 
 index 142
 
-
-
 ## THAW-ALL-LAYERS
 
 index 143
-
-
 
 ## LOCK-ALL-LAYERS
 
 index 144
 
-
-
 ## UNLOCK-ALL-LAYERS
 
 index 145
-
-
 
 ## ADD-DOLPHIN
 
 index 146
 
-
-
 ## ADD-DISTANCE
 
 index 147
-
-
 
 ## LOCATE-POINT
 
 index 148
 
-
-
 ## QUICKSELECT
 
 index 149
-
-
 
 ## SPELLCHECK
 
 index 150
 
-
-
 ## DISTANCE
 
 index 151
-
-
 
 ## MOVE
 
 index 152
 
-
-
 ## QUICKLEADER
 
 index 153
-
-
 
 ## RGB
 
  index 154
 
-
-
 ## ROTATE
 
 index 155
-
-
 
 ## SANDBOX
 
 index 156
 
-
-
 ## ADD-SNOWFLAKE
 
 index 157
-
-
 
 ## ADD-STAR
 
@@ -1815,8 +1152,6 @@ Adds a star to the vector layer at the mouse co-ords.
 ## DELETE
 
 index 159
-
-
 
 ## SCALE
 
@@ -1831,72 +1166,9 @@ entire design.
 
 index 161
 
-
-
 ## SYSWINDOWS
 
 index 162
-
-
-## TRIM
-
-index 163
-selected stitches
-
-Sets the flag for the stitches selected to `TRIM`.
-
-## SPLIT
-
-index 164
-A selected line in the vector layer. Otherwise 2 mouse co-ords in sequence.
-
-Seperates stitch blocks by cutting threads between those either side of a line
-supplied by the user then rerouting the stitches.
-
-## TIME
-
-index 165
-
-Prints the current time as ISO formatted UTC to the console.
-
-## ZOOMFACTOR
-
-index 166 argument real number
-
-Sets the zoom factor to the supplied argument.
-
-## PRODUCT
-
-index 167
-
-Prints the name and build code of the running version of Embroidermodder to
-disambiguate between forks and build versions. The string may only start with
-`embroidermodder` if the build is from the official Embroidermodder project
-under the terms of the license.
-
-## OFFSET
-
-| index | arguments | flags |
-|------|------|------|
-| 168 | mouse co-ords | |
-
-Shifts the selected objects by the amount given by the mouse co-ordinates.
-
-FIND
-----
-
-index 169 argument int
-
-Select the stitch at the index given and center the view on it.
-
-RECORD
-------
-
-index 170
-
-Start recording all user input that passes through the actuator (i.e. actions
-from this table, with all the data passed as arguments) for forming macros. Stop
-recording if RECORD/PLAYBACK/END is issued.
 
 BREAK_AT_POINT
 --------------
@@ -1987,33 +1259,6 @@ index 186
 ## ARRAY
 
 index 187
-
-## ARC-RT
-
-index 188
-FIXME: Not sure what this one means.
-
-\chapter{CAD Command Overview}
-
-\section{ADD-HORIZONTAL-DIMENSION}
-\index{ADD-HORIZONTAL-DIMENSION}
-
-\begin{center}
-\begin{tabular}{l | l | l}
-index & arguments & flags \\
-6 & none &
-\end{tabular}
-\end{center}
-
-\section{ADD-IMAGE}
-\index{ADD-IMAGE}
-
-\begin{center}
-\begin{tabular}{l | l | l}
-index & arguments & flags \\
-7 & none &
-\end{tabular}
-\end{center}
 
 \section{ADD-INFINITE-LINE}
 \index{ADD-INFINITE-LINE}
@@ -2220,10 +1465,6 @@ index 45
 
 index 46
 
-\section{MESSAGEBOX}
-\index{action}
-
-index 47, 3 char arrays deliminated by quotes Example Call
 
 \section{MIRROR-SELECTED}
 \index{action}
@@ -2275,47 +1516,44 @@ index 56
 
 index 57
 
-\section{PASTE-SELECTED}
-\index{PASTE-SELECTED}
+``perpendicular-distance`` command
+==================================
 
-index 58
-
-\section{PERPENDICULAR-DISTANCE}
-\index{PERPENDICULAR-DISTANCE}
+.. index:: ``perpendicular-distance``
 
 index 59
 
-\section{PLATFORM}
-\index{PLATFORM}
+``platform`` command
+====================
+
+.. index:: ``platform``
 
 index 60
 
-\section{PREVIEW-OFF}
-\index{PREVIEW-OFF}
+``preview-off`` command
+=======================
+
+.. index:: ``preview-off``
 
 index 61
 
-\section{PREVIEW-ON}
-\index{PREVIEW-ON}
+``preview-on`` command
+=======================
+
+.. index:: ``preview-on``
 
 index 62
 
-\section{PRINT}
-\index{PRINT}
+``QSNAP-X`` command
+===================
 
-index 63
-
-\section{PRINT-AREA}
-\index{PRINT-AREA}
-
-index 64
-
-\section{QSNAP-X}
 \index{QSNAP-X}
 
 index 65
 
-\section{QSNAP-Y}
+``QSNAP-Y`` command
+===================
+
 \index{QSNAP-Y}
 
 index 66
@@ -2470,35 +1708,6 @@ index 95
 
  index 96
 
-\section{ZOOM-IN}
-\index{action}
-
-index 97
-
-\section{TEST}
-\index{action}
-
- index 98
-
-\section{SLEEP}
-\index{action}
-
-index 99
-
-\section{LAYER-EDITOR}
-\index{action}
-
-index 100
-
-\section{MAKE-LAYER-CURRENT}
-\index{action}
-
-index 101
-
-\section{TEXT-BOLD}
-\index{action}
-
-index 102
 
 \section{TEXT-ITALIC}
 \index{action}
@@ -2629,121 +1838,4 @@ index 127
 \index{action}
 
 index 128
-
-\section{LAYER-SELECTOR}
-\index{action}
-
-index 129
-
-\section{TREBLECLEF}
-\index{action}
-
-index 130
-
-\section{COLOR-SELECTOR}
-\index{action}
-
-index 131
-
-\section{LINE-TYPE-SELECTOR}
-\index{action}
-
-index 132
-
-\section{LINE-WEIGHT-SELECTOR}
-\index{action}
-
-index 133
-
-\section{ZOOM-SCALE}
-\index{action}
-
-index 134
-
-\section{ZOOM-CENTER}
-\index{action}
-
-index 135
-
-\section{HIDE-ALL-LAYERS}
-\index{action}
-
-index 136
-
-\section{ZOOM-SELECTED}
-\index{action}
-
-index 137
-
-\section{ZOOM-ALL}
-\index{action}
-
-index 138
-
-\section{ADD-HEART}
-\index{action}
-
-index 139
-
-\section{ADD-SINGLE-LINE-TEXT}
-\index{action}
-
-index 140
-
-
-\section{THAW-ALL-LAYERS}
-\index{action}
-
-index 143
-
-\section{LOCK-ALL-LAYERS}
-\index{action}
-
-index 144
-
-\section{UNLOCK-ALL-LAYERS}
-\index{UNLOCK-ALL-LAYERS}
-
-index 145
-
-\section{ADD-DOLPHIN}
-\index{ADD-DOLPHIN}
-
-index 146
-
-\section{ADD-DISTANCE}
-\index{ADD-DISTANCE}
-
-index 147
-
-\section{LOCATE-POINT}
-\index{LOCATE-POINT}
-
-index 148
-
-\section{QUICKSELECT}
-\index{QUICKSELECT}
-
-index 149
-
-\section{SPELLCHECK}
-\index{SPELLCHECK}
-
-index 150
-
-\section{DISTANCE}
-\index{DISTANCE}
-
-index 151
-
-\section{MOVE}
-\index{MOVE}
-
-index 152
-
-\section{QUICKLEADER}
-\index{QUICKLEADER}
-
-index 153
-
 

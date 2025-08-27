@@ -1,5 +1,5 @@
-add-horizontal-dimension
-------------------------
+``add-horizontal-dimension`` command
+====================================
 
 .. index:: add-horizontal-dimension
 
@@ -11,4 +11,11 @@ add-horizontal-dimension
 **alias**
 **shortcut**
 ============== ===================
+
+\begin{center}
+\begin{tabular}{l | l | l}
+index & arguments & flags \\
+6 & none &
+\end{tabular}
+\end{center}
 

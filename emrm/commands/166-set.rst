@@ -1,0 +1,16 @@
+``set`` command
+===============
+
+.. index:: ``set``; ``zoomfactor``
+
+========== ==============
+index      166
+argument 1 variable name (string)
+argument 2 the new value (any type)
+========== ==============
+
+========== ==============
+label      action
+zoomfactor Sets the zoom factor to the supplied argument.
+========== ==============
+

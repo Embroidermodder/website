@@ -3,7 +3,11 @@ messagebox
 
 .. index:: messagebox
 
-index 47, 3 char arrays deliminated by quotes
++------------+---------------------------------------+
+| index      | 47                                    |
++------------+---------------------------------------+
+| arguments  | 3 char arrays deliminated by quotes   |
++------------+---------------------------------------+
 
 Example Call
 

@@ -1,5 +1,5 @@
-PRODUCT
--------
+``product`` command
+===================
 
 index 167
 

@@ -1,5 +1,5 @@
-add-image
----------
+``add-image`` command
+=====================
 
 .. index:: add-image
 
@@ -11,4 +11,11 @@ add-image
 **alias**
 **shortcut**
 ============== ===================
+
+\begin{center}
+\begin{tabular}{l | l | l}
+index & arguments & flags \\
+7 & none &
+\end{tabular}
+\end{center}
 
