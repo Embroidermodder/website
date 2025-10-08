@@ -2,4 +2,7 @@ Tutorials
 =========
 
 .. toctree::
-   tutorials/add_a_stitch.rst
+   tutorials/modify.rst
+   tutorials/create.rst
+   tutorials/script.rst
+
