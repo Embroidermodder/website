@@ -1,0 +1,4 @@
+``chamfer`` command
+-------------------
+
+.. index:: ``chamfer``

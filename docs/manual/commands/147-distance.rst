@@ -1,0 +1,4 @@
+``distance`` command
+--------------------
+
+.. index:: ``distance``

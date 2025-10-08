@@ -1,0 +1,4 @@
+``units`` command
+-----------------
+
+.. index:: ``units``

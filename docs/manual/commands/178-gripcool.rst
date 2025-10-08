@@ -1,0 +1,4 @@
+``gripcool`` command
+--------------------
+
+.. index:: ``gripcool``

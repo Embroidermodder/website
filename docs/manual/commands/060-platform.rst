@@ -1,0 +1,4 @@
+``platform`` command
+--------------------
+
+.. index:: ``platform``

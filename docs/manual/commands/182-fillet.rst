@@ -1,0 +1,4 @@
+``fillet`` command
+------------------
+
+.. index:: ``fillet``

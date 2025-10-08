@@ -1,0 +1,4 @@
+``details`` command
+-------------------
+
+.. index:: ``details``

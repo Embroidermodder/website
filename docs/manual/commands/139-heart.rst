@@ -1,0 +1,4 @@
+``heart`` command
+-----------------
+
+.. index:: ``heart``

@@ -1,0 +1,4 @@
+``griphot`` command
+-------------------
+
+.. index:: ``griphot``

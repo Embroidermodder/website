@@ -1,0 +1,4 @@
+``trebleclef`` command
+----------------------
+
+.. index:: ``trebleclef``

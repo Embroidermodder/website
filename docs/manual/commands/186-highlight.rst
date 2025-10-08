@@ -1,0 +1,4 @@
+``highlight`` command
+---------------------
+
+.. index:: ``highlight``

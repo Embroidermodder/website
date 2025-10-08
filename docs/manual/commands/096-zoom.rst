@@ -1,0 +1,4 @@
+``zoom`` command
+----------------
+
+.. index:: ``zoom``

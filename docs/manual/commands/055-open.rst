@@ -1,0 +1,4 @@
+``open`` command
+----------------
+
+.. index:: ``open``

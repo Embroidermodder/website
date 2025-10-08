@@ -1,0 +1,4 @@
+``version`` command
+-------------------
+
+.. index:: ``version``

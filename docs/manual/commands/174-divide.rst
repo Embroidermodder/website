@@ -1,0 +1,4 @@
+``divide`` command
+------------------
+
+.. index:: ``divide``

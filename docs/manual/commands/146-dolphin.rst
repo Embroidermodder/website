@@ -1,0 +1,4 @@
+``dolphin`` command
+-------------------
+
+.. index:: ``dolphin``

@@ -1,0 +1,4 @@
+``exit`` command
+----------------
+
+.. index:: ``exit``

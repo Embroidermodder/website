@@ -1,0 +1,4 @@
+``rubber`` command
+------------------
+
+.. index:: ``rubber``

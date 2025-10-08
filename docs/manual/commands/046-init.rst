@@ -1,0 +1,4 @@
+``init`` command
+----------------
+
+.. index:: ``init``

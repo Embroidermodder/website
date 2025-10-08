@@ -1,0 +1,4 @@
+``array`` command
+-----------------
+
+.. index:: ``array``

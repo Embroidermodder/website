@@ -1,0 +1,4 @@
+``save`` command
+----------------
+
+.. index:: ``save``

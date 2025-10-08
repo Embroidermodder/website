@@ -1,0 +1,23 @@
+``set`` command
+===============
+
+.. index:: ``set``; ``zoomfactor``; ``background-color``
+
+========== ==============
+index      166
+argument 1 variable name (string)
+argument 2 the new value (any type)
+========== ==============
+
+==========       ==============
+label            action
+zoomfactor       Sets the zoom factor to the supplied argument.
+background-color Sets the background color of the view.
+crosshair-color  Sets the crosshair color of cursor when in the view.
+grid-color       Sets the grid color in the view.
+cursor-shape     Sets the cursor shape to one of the options detailed in the cursor shapes table below (TODO).
+prompt-prefix    Sets the symbol in the prompt to indicate where text entry happens.
+rubber-filter    Sets which rubber points to show based on type.
+rubber-mode      Sets how you interact with rubber points.
+==========       ==============
+

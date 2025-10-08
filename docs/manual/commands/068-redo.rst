@@ -1,0 +1,4 @@
+``redo`` command
+----------------
+
+.. index:: ``redo``

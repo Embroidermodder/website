@@ -1,0 +1,4 @@
+``grid`` command
+----------------
+
+.. index:: ``grid``

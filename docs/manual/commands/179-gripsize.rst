@@ -1,0 +1,4 @@
+``gripsize`` command
+--------------------
+
+.. index:: ``gripsize``

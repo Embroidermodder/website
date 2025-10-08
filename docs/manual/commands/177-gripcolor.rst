@@ -1,0 +1,4 @@
+``gripcolor`` command
+---------------------
+
+.. index:: ``gripcolor``

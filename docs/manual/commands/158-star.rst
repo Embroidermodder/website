@@ -1,0 +1,4 @@
+``star`` command
+----------------
+
+.. index:: ``star``

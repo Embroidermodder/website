@@ -1,0 +1,4 @@
+``vulcanize`` command
+---------------------
+
+.. index:: ``vulcanize``
