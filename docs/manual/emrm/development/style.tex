@@ -1,0 +1,142 @@
+
+
+\ifdefined\uspaper
+\documentclass[10pt]{report}
+\else
+\documentclass[a4paper,10pt]{report}
+\fi
+
+% Encoding goes first because it effects how other packages work
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[english]{babel} %language selection
+\selectlanguage{english}
+
+\pagenumbering{arabic}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks, 
+           citecolor=black,
+           filecolor=black,
+           linkcolor=black,
+           urlcolor=black,
+           bookmarksopen=true,
+           pdftex}
+
+\hfuzz = .6pt % avoid black boxes
+
+% Fonts
+\usepackage{courier}
+\usepackage{newpxtext}
+
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{fancyhdr}
+\usepackage{imakeidx}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{csvsimple}
+
+\DeclareUnicodeCharacter{0008}{ }
+
+\geometry{
+    margin=1.4in,
+    marginparwidth=0.8in
+}
+
+% Constants that are redefined
+\newcommand{\embversion}{2.0.0-alpha4}
+\newcommand{\version}{\embversion}
+\newcommand{\libembversion}{1.0.0-alpha}
+\newcommand{\publicationdate}{August 2023}
+
+\newcommand{\apifunc}[1]{
+    \subsubsection{\texttt{#1}}
+    \index{\texttt{#1}}
+}
+
+% Marginalia
+\newcommand{\todo}[1]{\marginpar{\emph{TODO}\\{\footnotesize #1}}}
+
+\makeindex
+
+\title{Embroidermodder Reference Manual \embversion}
+\author{The Embroidermodder Team}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  language=C,
+  numbers=left,
+  extendedchars=true,
+%  commentstyle=\color{olivegreen},
+  title=\lstname,
+  frame=single
+}
+
+\hypersetup{
+  colorlinks=true,
+  breaklinks=true,
+  linkcolor=black,
+  filecolor=black,      
+  urlcolor=black,
+  citecolor=black
+}
+
+\begin{document}
+
+\begin{titlepage}
+
+\vspace*{8cm}
+
+\noindent\textbf{\Huge Embroidermodder}
+
+\vspace{10pt}
+
+\noindent\rule{\linewidth}{2pt}
+
+\vspace{10pt}
+
+\begin{flushright}
+\Large
+    Reference Manual
+
+\normalsize
+    The design, analysis and rationale of all Embroidermodder projects.
+
+\embversion
+
+\vspace{10pt}
+
+\url{https://www.libembroidery.org}
+
+\publicationdate
+\end{flushright}
+
+\vspace{6cm}
+
+\begin{flushleft}
+\Large
+\emph{The Embroidermodder Team}
+
+\url{embroidermodder@gmail.com}
+
+\vspace{10pt}
+
+\noindent\rule{\linewidth}{1pt}
+
+\end{flushleft}
+    
+\end{titlepage}
+
+
+\vspace*{8cm}
+

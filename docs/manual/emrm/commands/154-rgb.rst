@@ -1,0 +1,8 @@
+rgb
+---
+
+.. index:: ``rgb``
+
+ index 154
+
+
